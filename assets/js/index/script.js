@@ -12,7 +12,7 @@ function header() {
       self.progress === 0 ? $("header").removeClass("header--scroll") : "";
       // self.direction === 1 ? $("header").addClass("header--scroll") : "";
 
-      if (self.progress > 0.006) {
+      if (self.progress > 0.004) {
         $("header").addClass("header--scroll");
       } else {
         $("header").removeClass("header--scroll");
@@ -101,35 +101,87 @@ function customDropdown() {
   });
 }
 
-gsap.registerPlugin(ScrollTrigger);
+function animation() {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
+  gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 20
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 70%",
+          end: "bottom 70%"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power1.out",
+        stagger: 0.1
+      }
+    );
+  });
+
+  gsap.utils.toArray(".data-zoom-in").forEach((element, i) => {
+    gsap.fromTo(
+      element,
+      {
+        scale: 1.1
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 70%",
+          end: "bottom 70%"
+        },
+        scale: 1,
+        duration: 0.5,
+        ease: "none",
+        stagger: 0.1
+      }
+    );
+  });
+}
+
+function sectionImage() {
+  if ($(".section-image").length < 1) return;
+
   gsap.fromTo(
-    element,
+    ".section-image",
     {
-      opacity: 0,
-      y: 20
+      scale: 1
     },
     {
       scrollTrigger: {
-        trigger: element,
+        trigger: ".section-image",
         start: "top 70%",
-        end: "bottom 70%"
+        end: "bottom 70%",
+        scrub: 1 // Thêm scrub để scale mượt mà theo scroll
       },
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power1.out",
-      stagger: 0.1
+      scale: () => {
+        // Tính toán scale dựa trên viewport width
+        const viewportWidth = window.innerWidth;
+        const targetWidth = viewportWidth - 160; // 100vw - 160px
+        const scaleFactor = targetWidth / viewportWidth; // Tỷ lệ scale
+        return scaleFactor;
+      },
+      duration: 0.4,
+      ease: "power2.out"
     }
   );
-});
+}
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   header();
   discover();
   customDropdown();
+  animation();
+  sectionImage();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
