@@ -17,6 +17,20 @@ function header() {
       } else {
         $("header").removeClass("header--scroll");
       }
+
+      if (self.progress > 0.07 && !self.vars.zoomInitialized) {
+        gsap.fromTo(
+          ".data-zoom-in-footer",
+          { scale: 1.1 },
+          {
+            scale: 1,
+            duration: 0.5,
+            ease: "none",
+            stagger: 0.1
+          }
+        );
+        self.vars.zoomInitialized = true;
+      }
     }
   });
 }
@@ -116,6 +130,7 @@ function animation() {
           trigger: element,
           start: "top 70%",
           end: "bottom 70%"
+          // markers: true
         },
         opacity: 1,
         y: 0,
@@ -160,13 +175,12 @@ function sectionImage() {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1 // Thêm scrub để scale mượt mà theo scroll
+        scrub: 1
       },
       scale: () => {
-        // Tính toán scale dựa trên viewport width
         const viewportWidth = window.innerWidth;
-        const targetWidth = viewportWidth - 160; // 100vw - 160px
-        const scaleFactor = targetWidth / viewportWidth; // Tỷ lệ scale
+        const targetWidth = viewportWidth - 160;
+        const scaleFactor = targetWidth / viewportWidth;
         return scaleFactor;
       },
       duration: 0.4,
