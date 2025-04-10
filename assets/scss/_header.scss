@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 167px;
+  width: 100%;
+  transition: all 0.4s ease;
+
+  &.header--scroll {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+  }
+
+  &-logo {
+    width: 167px;
+    aspect-ratio: 167 / 87;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
