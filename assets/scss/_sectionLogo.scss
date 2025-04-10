@@ -1,0 +1,11 @@
+.section-logo {
+  .list-item {
+    margin-top: 64px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    gap: 80px;
+  }
+}

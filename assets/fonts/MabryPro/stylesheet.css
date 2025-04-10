@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'SVN-Mabry Pro';
+    src: url('SVN-MabryPro-Black.eot');
+    src: url('SVN-MabryPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('SVN-MabryPro-Black.woff2') format('woff2'),
+        url('SVN-MabryPro-Black.woff') format('woff'),
+        url('SVN-MabryPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Mabry Pro';
+    src: url('SVN-MabryPro-Regular.eot');
+    src: url('SVN-MabryPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SVN-MabryPro-Regular.woff2') format('woff2'),
+        url('SVN-MabryPro-Regular.woff') format('woff'),
+        url('SVN-MabryPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Mabry Pro';
+    src: url('SVN-MabryPro-Light.eot');
+    src: url('SVN-MabryPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('SVN-MabryPro-Light.woff2') format('woff2'),
+        url('SVN-MabryPro-Light.woff') format('woff'),
+        url('SVN-MabryPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

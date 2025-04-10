@@ -1,0 +1,23 @@
+.section-desc {
+  .title {
+    font-size: 64px;
+    line-height: 64px;
+    color: var(--color-secondary);
+    font-weight: 300;
+    text-align: center;
+    font-family: var(--font-heading);
+    margin-bottom: 64px;
+  }
+
+  .desc {
+    font-size: 28px;
+    line-height: 40px;
+    color: var(--color-secondary);
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-family: var(--font-heading);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
