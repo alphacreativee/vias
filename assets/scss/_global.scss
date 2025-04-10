@@ -1,5 +1,12 @@
 body {
   background-color: #f4f1ec;
+  font-family: var(--font-body);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  background-color: #f4f1ec;
 }
 
 .spacing-80 {
