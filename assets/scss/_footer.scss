@@ -56,9 +56,31 @@ footer {
       gap: 16px;
       margin-top: 34px;
 
+      a {
+        &:hover {
+          circle {
+            stroke: var(--color-primary);
+          }
+
+          path {
+            // fill: var(--color-primary);
+          }
+
+          svg {
+            fill: var(--color-primary);
+          }
+        }
+      }
+
       svg {
         width: 34px;
         height: 34px;
+        transition: all 0.4s ease;
+
+        circle,
+        path {
+          transition: all 0.4s ease;
+        }
       }
     }
 
@@ -85,6 +107,12 @@ footer {
         background-color: var(--color-white);
         color: var(--color-secondary);
         font-weight: 900;
+        transition: all 0.4s ease;
+
+        &:hover {
+          color: var(--color-white);
+          background-color: var(--color-primary);
+        }
       }
     }
 

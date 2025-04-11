@@ -18,20 +18,84 @@ function header() {
         $("header").removeClass("header--scroll");
       }
 
-      if (self.progress > 0.07 && !self.vars.zoomInitialized) {
-        gsap.fromTo(
-          ".data-zoom-in-footer",
-          { scale: 1.1 },
-          {
-            scale: 1,
-            duration: 0.5,
-            ease: "none",
-            stagger: 0.1
-          }
-        );
-        self.vars.zoomInitialized = true;
+      if (self.progress < 0.0017 || self.progress > 0.069) {
+        $(".cta-mess").addClass("hide");
+      } else {
+        $(".cta-mess").removeClass("hide");
       }
     }
+  });
+}
+
+function footer() {
+  gsap.fromTo(
+    ".data-zoom-in-footer",
+    { scale: 1.1 },
+    {
+      scale: 1,
+      duration: 0.5,
+      ease: "none",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "body",
+        start: "bottom bottom-=200",
+        toggleActions: "play reverse play reverse"
+        // markers: true
+      }
+    }
+  );
+}
+
+function hero() {
+  if ($("section.hero").length < 1) return;
+
+  $(".hero-slider").each(function () {
+    let $slider = $(this);
+
+    let $dataSpeed;
+    let $dataLoop = $slider.attr("data-loop");
+    let $dataAutoplay = $slider.data("autoplay")
+      ? { delay: $slider.data("autoplay") }
+      : $slider.data("autoplay");
+    if ($slider.is("[data-speed]")) {
+      $dataSpeed = $slider.data("speed");
+    } else {
+      $dataSpeed = 900; // by default
+    }
+
+    new Swiper($slider[0], {
+      direction: "vertical",
+      speed: $dataSpeed,
+      loop: $dataLoop,
+      autoplay: $dataAutoplay,
+      preloadImages: true,
+      parallax: true,
+      lazy: {
+        loadPrevNext: true
+      },
+      pagination: {
+        el: ".hero .swiper-pagination",
+        clickable: false,
+        renderBullet: function (i, className) {
+          return `
+            <button class="${className}">
+            <svg class="progress" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-origin" cx="14" cy="14" r="13" stroke="white"/>
+            </svg>
+            </button>`;
+        }
+      },
+      navigation: {
+        nextEl: ".hero .swiper-button-next",
+        prevEl: ".hero .swiper-button-prev"
+      },
+      on: {
+        init: function () {
+          let $this = this;
+          $($this.slides[$this.activeIndex]);
+        }
+      }
+    });
   });
 }
 
@@ -166,7 +230,38 @@ function sectionImage() {
   if ($(".section-image").length < 1) return;
 
   gsap.fromTo(
-    ".section-image",
+    ".section-image .image-wrapper",
+    {
+      clipPath: "inset(0% 0% 0% 0%)"
+    },
+    {
+      scrollTrigger: {
+        trigger: ".section-image",
+        start: "top 70%",
+        end: "bottom 70%",
+        scrub: 1
+      },
+      clipPath: () => {
+        const viewportWidth = window.innerWidth;
+        const targetWidth = viewportWidth - 160;
+        const widthClipPercentage =
+          ((viewportWidth - targetWidth) / 2 / viewportWidth) * 100;
+
+        const image = document.querySelector(".section-image");
+        const currentHeight = image.offsetHeight;
+        const targetHeight = currentHeight - 100;
+        const heightClipPixels = (currentHeight - targetHeight) / 2;
+        const heightClipPercentage = (heightClipPixels / currentHeight) * 100;
+
+        return `inset(${heightClipPercentage}% ${widthClipPercentage}% ${heightClipPercentage}% ${widthClipPercentage}%)`;
+      },
+      duration: 0.4,
+      ease: "power2.out"
+    }
+  );
+
+  gsap.fromTo(
+    ".section-image .image-wrapper img",
     {
       scale: 1
     },
@@ -177,12 +272,7 @@ function sectionImage() {
         end: "bottom 70%",
         scrub: 1
       },
-      scale: () => {
-        const viewportWidth = window.innerWidth;
-        const targetWidth = viewportWidth - 160;
-        const scaleFactor = targetWidth / viewportWidth;
-        return scaleFactor;
-      },
+      scale: 1.1,
       duration: 0.4,
       ease: "power2.out"
     }
@@ -192,6 +282,8 @@ function sectionImage() {
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   header();
+  footer();
+  hero();
   discover();
   customDropdown();
   animation();
@@ -204,4 +296,8 @@ preloadImages("img").then(() => {
 });
 $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
+});
+
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
 });

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '1FTV Photograph Signature';
+    src: url('1FTVPhotographSignature.eot');
+    src: url('1FTVPhotographSignature.eot?#iefix') format('embedded-opentype'),
+        url('1FTVPhotographSignature.woff2') format('woff2'),
+        url('1FTVPhotographSignature.woff') format('woff'),
+        url('1FTVPhotographSignature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
