@@ -240,17 +240,18 @@ function animation() {
         trigger: container,
         scrub: true,
         pin: false
+        // markers: true
       }
     });
 
     tl.fromTo(
       img,
       {
-        y: -20,
+        yPercent: -10,
         ease: "none"
       },
       {
-        y: 20,
+        yPercent: 10,
         ease: "none"
       }
     );
@@ -314,6 +315,17 @@ function sectionImage() {
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
+
+  // const lenis = new Lenis({
+  //   lerp: 0.09
+  // });
+
+  // lenis.on("scroll", ScrollTrigger.update);
+
+  // gsap.ticker.add((time) => {
+  //   lenis.raf(time * 1000);
+  // });
+
   header();
   footer();
   hero();
@@ -321,6 +333,7 @@ const init = () => {
   customDropdown();
   animation();
   sectionImage();
+  ScrollTrigger.refresh();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
