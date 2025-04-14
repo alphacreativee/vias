@@ -8,6 +8,12 @@
       padding: 64px 16px;
     }
 
+    .list-item {
+      @media (max-width: 767px) {
+        padding-bottom: 62px;
+      }
+    }
+
     .item {
       &-text {
         margin-top: 24px;
@@ -46,6 +52,16 @@
     justify-content: center;
     transition: all 0.4s ease;
 
+    @media (max-width: 767px) {
+      width: 44px;
+      height: 44px;
+      top: unset;
+      bottom: 0;
+      position: unset;
+      border: 1px solid var(--color-primary);
+      transform: none;
+    }
+
     &:hover {
       background-color: var(--color-white);
 
@@ -60,11 +76,23 @@
 
       path {
         transition: all 0.4s ease;
+
+        @media (max-width: 767px) {
+          stroke: var(--color-primary);
+        }
       }
     }
 
     &::after {
       display: none;
     }
+  }
+
+  .discover-arrow {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
 }

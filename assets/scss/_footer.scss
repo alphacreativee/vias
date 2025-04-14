@@ -68,6 +68,11 @@ footer {
       gap: 16px;
       margin-top: 34px;
 
+      @media (max-width: 767px) {
+        justify-content: center;
+        margin-top: 64px;
+      }
+
       a {
         &:hover {
           circle {

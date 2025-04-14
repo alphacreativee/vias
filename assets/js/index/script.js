@@ -105,14 +105,20 @@ function discover() {
   if ($(".section-discover").length < 1) return;
 
   var swiperDiscover = new Swiper(".swiper-discover", {
-    slidesPerView: 2,
-    loop: true,
-    speed: 1500,
-    spaceBetween: 24,
+    slidesPerView: 1,
+    loop: false,
+    speed: 1000,
+    spaceBetween: 16,
     loopAdditionalSlides: 8,
     navigation: {
-      nextEl: ".swiper-discover .swiper-button-next",
-      prevEl: ".swiper-discover .swiper-button-prev"
+      nextEl: ".section-discover .swiper-button-next",
+      prevEl: ".section-discover .swiper-button-prev"
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
     }
   });
 }
@@ -268,13 +274,15 @@ function sectionImage() {
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
-        const targetWidth = viewportWidth - 320;
+        const targetWidth =
+          viewportWidth > 767 ? viewportWidth - 320 : viewportWidth - 32;
         const widthClipPercentage =
           ((viewportWidth - targetWidth) / 2 / viewportWidth) * 100;
 
         const image = document.querySelector(".section-image");
         const currentHeight = image.offsetHeight;
-        const targetHeight = currentHeight - 100;
+        const targetHeight =
+          viewportWidth > 767 ? currentHeight - 100 : currentHeight;
         const heightClipPixels = (currentHeight - targetHeight) / 2;
         const heightClipPercentage = (heightClipPixels / currentHeight) * 100;
 
