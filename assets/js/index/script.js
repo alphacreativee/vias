@@ -2,6 +2,9 @@ import { preloadImages } from "../../libs/utils.js";
 let lenis;
 Splitting();
 
+("use strict");
+$ = jQuery;
+
 function header() {
   ScrollTrigger.refresh();
 
@@ -18,11 +21,10 @@ function header() {
         $("header").removeClass("header--scroll");
       }
 
-      if (self.progress < 0.0017 || self.progress > 0.069) {
-        $(".cta-mess").addClass("hide");
-      } else {
-        $(".cta-mess").removeClass("hide");
-      }
+      // self.progress === 0 ? $(".cta-mess").removeClass("hide") : "";
+      self.direction === 1
+        ? $(".cta-mess").addClass("hide")
+        : $(".cta-mess").removeClass("hide");
     }
   });
 }
@@ -104,7 +106,7 @@ function discover() {
 
   var swiperDiscover = new Swiper(".swiper-discover", {
     slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
     loop: true,
     speed: 1500,
     spaceBetween: 24,
@@ -224,6 +226,30 @@ function animation() {
       }
     );
   });
+
+  gsap.utils.toArray(".parallax-trigger").forEach((container) => {
+    const img = container.querySelector("img");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        scrub: true,
+        pin: false
+      }
+    });
+
+    tl.fromTo(
+      img,
+      {
+        y: -20,
+        ease: "none"
+      },
+      {
+        y: 20,
+        ease: "none"
+      }
+    );
+  });
 }
 
 function sectionImage() {
@@ -243,7 +269,7 @@ function sectionImage() {
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
-        const targetWidth = viewportWidth - 160;
+        const targetWidth = viewportWidth - 320;
         const widthClipPercentage =
           ((viewportWidth - targetWidth) / 2 / viewportWidth) * 100;
 

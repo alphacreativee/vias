@@ -4,6 +4,10 @@
   .discover-wrapper {
     padding: 80px 84px;
 
+    @media (max-width: 767px) {
+      padding: 64px 16px;
+    }
+
     .item {
       &-text {
         margin-top: 24px;
