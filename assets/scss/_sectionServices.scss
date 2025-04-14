@@ -1,10 +1,19 @@
 .section-services {
   .services_wrapper {
     padding: 0 80px;
+
+    @media (max-width: 767px) {
+      padding: 0 16px;
+    }
   }
 
   .list-item {
     margin-top: 64px;
+
+    @media (max-width: 767px) {
+      margin-top: 40px;
+      gap: 140px;
+    }
 
     .item-image {
       width: 100%;
@@ -36,9 +45,13 @@
       min-height: 200px;
       border-bottom: 3px solid var(--color-secondary);
 
+      @media (max-width: 767px) {
+        padding: 24px;
+      }
+
       .tag {
         font-family: var(--font-body);
-        margin-bottom: 17px;
+        margin-bottom: 16px;
         font-size: 12px;
         line-height: 24px;
         font-weight: 900;

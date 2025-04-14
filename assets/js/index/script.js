@@ -106,14 +106,13 @@ function discover() {
 
   var swiperDiscover = new Swiper(".swiper-discover", {
     slidesPerView: 2,
-    slidesPerGroup: 1,
     loop: true,
     speed: 1500,
     spaceBetween: 24,
     loopAdditionalSlides: 8,
     navigation: {
       nextEl: ".swiper-discover .swiper-button-next",
-      prevEl: ".swiper-discover.swiper-button-prev"
+      prevEl: ".swiper-discover .swiper-button-prev"
     }
   });
 }
