@@ -30,6 +30,10 @@
 
   .swiper-discover {
     margin-top: 64px;
+
+    @media (max-width: 767px) {
+      margin-top: 40px;
+    }
   }
 
   .swiper-button-next {
