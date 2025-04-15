@@ -1,12 +1,23 @@
 body {
   background-color: #f4f1ec;
   font-family: var(--font-body);
+  transition: background-color 0.4s ease;
+
+  &.discover-active {
+    background-color: var(--color-white);
+  }
 }
 
 main {
   position: relative;
   z-index: 2;
   background-color: #f4f1ec;
+
+  transition: background-color 0.4s ease;
+
+  &.discover-active {
+    background-color: var(--color-white);
+  }
 }
 
 .spacing-80 {

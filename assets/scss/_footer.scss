@@ -163,10 +163,10 @@ footer {
 
     &-pattern {
       position: absolute;
-      top: 0;
+      bottom: -10%;
       left: 50%;
       transform: translateX(-50%);
-      width: 55%;
+      width: 45%;
       height: 100%;
 
       @media (max-width: 767px) {

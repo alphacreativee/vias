@@ -30,22 +30,35 @@ function header() {
 }
 
 function footer() {
+  ScrollTrigger.refresh();
+
   gsap.fromTo(
-    ".data-zoom-in-footer",
-    { scale: 1.1 },
+    ".footer-main .data-zoom-in-footer",
+    { scale: 1.2, "will-change": "transform" },
     {
       scale: 1,
       duration: 0.5,
       ease: "none",
-      stagger: 0.1,
       scrollTrigger: {
-        trigger: "body",
-        start: "bottom bottom-=200",
-        toggleActions: "play reverse play reverse"
+        trigger: ".footer-ovl .data-zoom-in-footer",
+        start: "top 75%",
+        scrub: true
         // markers: true
       }
     }
   );
+
+  // ScrollTrigger.create({
+  //   trigger: ".footer-ovl .data-zoom-in-footer",
+  //   start: "top 80%",
+  //   end: "bottom 20%",
+  //   toggleClass: {
+  //     targets: ".footer-ovl .data-zoom-in-footer",
+  //     className: "active"
+  //   },
+  //   markers: true,
+  //   scrub: false
+  // });
 }
 
 function hero() {
@@ -120,6 +133,18 @@ function discover() {
         spaceBetween: 24
       }
     }
+  });
+
+  ScrollTrigger.create({
+    trigger: ".section-discover",
+    start: "top 40%",
+    end: "bottom 60%",
+    toggleClass: {
+      targets: "body, main",
+      className: "discover-active"
+    },
+    // markers: true,
+    scrub: false
   });
 }
 
