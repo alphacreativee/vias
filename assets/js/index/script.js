@@ -128,7 +128,7 @@ function discover() {
       prevEl: ".section-discover .swiper-button-prev"
     },
     breakpoints: {
-      767: {
+      991: {
         slidesPerView: 2,
         spaceBetween: 24
       }
@@ -301,14 +301,14 @@ function sectionImage() {
       clipPath: () => {
         const viewportWidth = window.innerWidth;
         const targetWidth =
-          viewportWidth > 767 ? viewportWidth - 320 : viewportWidth - 32;
+          viewportWidth > 991 ? viewportWidth - 160 : viewportWidth - 32;
         const widthClipPercentage =
           ((viewportWidth - targetWidth) / 2 / viewportWidth) * 100;
 
         const image = document.querySelector(".section-image");
         const currentHeight = image.offsetHeight;
         const targetHeight =
-          viewportWidth > 767 ? currentHeight - 100 : currentHeight;
+          viewportWidth > 991 ? currentHeight - 100 : currentHeight;
         const heightClipPixels = (currentHeight - targetHeight) / 2;
         const heightClipPercentage = (heightClipPixels / currentHeight) * 100;
 

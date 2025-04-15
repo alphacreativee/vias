@@ -23,7 +23,7 @@ main {
 .spacing-80 {
   height: 80px;
 
-  @media (max-width: 676px) {
+  @media (max-width: 991px) {
     height: 64px;
 
     &.spacing-mb-24 {
@@ -35,7 +35,7 @@ main {
 .spacing-120 {
   height: 120px;
 
-  @media (max-width: 676px) {
+  @media (max-width: 991px) {
     height: 64px;
   }
 }
@@ -61,7 +61,7 @@ main {
     max-width: 45%;
     margin: 0 auto;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       max-width: 100%;
       font-size: 28px;
       line-height: 40px;
@@ -158,12 +158,12 @@ main {
   position: fixed;
   z-index: 10;
   right: 40px;
-  bottom: 90px;
+  bottom: 170px;
   transition: all 0.5s ease;
   transform: none;
   opacity: 1;
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     right: 16px;
     bottom: 80px;
   }

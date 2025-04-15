@@ -2,7 +2,7 @@
   .services_wrapper {
     padding: 0 80px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       padding: 0 16px;
     }
   }
@@ -10,9 +10,9 @@
   .list-item {
     margin-top: 64px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       margin-top: 40px;
-      gap: 140px;
+      row-gap: 140px;
     }
 
     .item-image {
@@ -45,7 +45,7 @@
       min-height: 200px;
       border-bottom: 3px solid var(--color-secondary);
 
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         padding: 24px;
       }
 

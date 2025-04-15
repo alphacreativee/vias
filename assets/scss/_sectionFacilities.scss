@@ -1,33 +1,34 @@
 .section-facilities {
-  padding-top: 80px;
+  padding-top: 0;
   padding-bottom: 104px;
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .facilities_wrapper {
     padding: 0 80px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       padding: 0 16px;
     }
   }
 
   .list-item {
     margin-top: 64px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       margin-top: 40px;
-      gap: 56px;
+      row-gap: 56px;
     }
     .item {
       &-wrapper {
-        padding: 32px 24px 0;
+        padding: 24px 24px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
         background-color: var(--color-white);
 
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
           padding: 24px 24px 0;
         }
       }

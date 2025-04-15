@@ -4,12 +4,12 @@
   .discover-wrapper {
     padding: 80px 84px;
 
-    @media (max-width: 767px) {
-      padding: 64px 16px;
+    @media (max-width: 991px) {
+      padding: 88px 16px 0;
     }
 
     .list-item {
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         padding-bottom: 62px;
       }
     }
@@ -42,7 +42,7 @@
   .swiper-discover {
     margin-top: 64px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       margin-top: 40px;
     }
   }
@@ -67,7 +67,7 @@
     justify-content: center;
     transition: all 0.4s ease;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       width: 44px;
       height: 44px;
       top: unset;
@@ -79,6 +79,10 @@
 
     &:hover {
       background-color: var(--color-white);
+
+      @media (max-width: 991px) {
+        background-color: transparent;
+      }
 
       path {
         stroke: var(--color-primary);
@@ -92,7 +96,7 @@
       path {
         transition: all 0.4s ease;
 
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
           stroke: var(--color-primary);
         }
       }

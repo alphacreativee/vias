@@ -2,7 +2,7 @@
   .logo-wrapper {
     padding: 0 80px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       padding: 0 16px;
     }
   }
@@ -10,7 +10,7 @@
   .section-title {
     margin-bottom: 64px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       margin-bottom: 40px;
     }
   }
@@ -27,12 +27,12 @@
     &:not(:last-child) {
       margin-bottom: 80px;
 
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         margin-bottom: 24px;
       }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       gap: 48px;
     }
 
@@ -43,6 +43,10 @@
       align-items: center;
       justify-content: center;
       justify-items: center;
+
+      @media (max-width: 991px) {
+        max-width: 120px;
+      }
 
       @media (max-width: 767px) {
         max-width: 90px;
