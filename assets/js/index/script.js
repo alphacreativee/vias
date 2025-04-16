@@ -106,6 +106,30 @@ function hero() {
       }
     });
   });
+
+  const fxTitle = document.querySelectorAll("[data-splitting]");
+  fxTitle.forEach((element) => {
+    const chars = element.querySelectorAll(".char");
+    gsap.fromTo(
+      chars,
+      {
+        "will-change": "opacity, transform",
+        opacity: 0,
+        y: 20
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.04,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 60%",
+          end: "bottom 60%"
+          // markers: true,
+        }
+      }
+    );
+  });
 }
 
 function discover() {
