@@ -73,7 +73,7 @@
       top: unset;
       bottom: 0;
       position: unset;
-      border: 1px solid var(--color-primary);
+      border: 1px solid var(--color-secondary);
       transform: none;
     }
 
@@ -85,7 +85,7 @@
       }
 
       path {
-        stroke: var(--color-primary);
+        stroke: var(--color-secondary);
       }
     }
 
@@ -97,7 +97,7 @@
         transition: all 0.4s ease;
 
         @media (max-width: 991px) {
-          stroke: var(--color-primary);
+          stroke: var(--color-secondary);
         }
       }
     }

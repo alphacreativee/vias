@@ -39,12 +39,21 @@
 
     @media (max-width: 991px) {
       width: 124px;
+      top: 24px;
+      transform: translate(-50%, 0);
     }
 
     img {
       width: 100%;
       height: auto;
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .dropdown-custom .dropdown-custom__text,
+    .dropdown-custom__menu .dropdown-custom__item {
+      text-transform: uppercase;
     }
   }
 }

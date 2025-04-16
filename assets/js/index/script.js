@@ -32,9 +32,12 @@ function header() {
 function footer() {
   ScrollTrigger.refresh();
 
+  const viewportWidth = window.innerWidth;
+  const scaleStart = viewportWidth > 991 ? 1.3 : 1.2;
+
   gsap.fromTo(
     ".footer-main .data-zoom-in-footer",
-    { scale: 1.2, "will-change": "transform" },
+    { scale: scaleStart, "will-change": "transform" },
     {
       scale: 1,
       duration: 0.5,
@@ -88,6 +91,9 @@ function hero() {
       lazy: {
         loadPrevNext: true
       },
+      allowTouchMove: false,
+      simulateTouch: false,
+      mousewheel: false,
       pagination: {
         el: ".hero .swiper-pagination",
         clickable: false,
@@ -248,6 +254,7 @@ function animation() {
           trigger: element,
           start: "top 70%",
           end: "bottom 70%"
+          // markers: true
         },
         scale: 1,
         duration: 0.5,

@@ -4,7 +4,7 @@
   position: relative;
 
   @media (max-width: 991px) {
-    height: 640px !important;
+    height: 540px !important;
     max-height: 100vh;
   }
 
@@ -13,7 +13,7 @@
     height: 100vh !important;
 
     @media (max-width: 991px) {
-      height: 640px !important;
+      height: 540px !important;
       max-height: 100vh;
     }
 
@@ -27,7 +27,7 @@
       transition-duration: 10000ms !important;
 
       @media (max-width: 991px) {
-        height: 640px !important;
+        height: 540px !important;
         max-height: 100vh;
       }
     }

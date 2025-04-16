@@ -40,6 +40,12 @@ main {
   }
 }
 
+@media (max-width: 991px) {
+  .spacing-mb-10 {
+    height: 10px !important;
+  }
+}
+
 .section-title {
   .tag {
     text-align: center;
