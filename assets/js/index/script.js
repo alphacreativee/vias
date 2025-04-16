@@ -33,35 +33,23 @@ function footer() {
   ScrollTrigger.refresh();
 
   const viewportWidth = window.innerWidth;
-  const scaleStart = viewportWidth > 991 ? 1.3 : 1.2;
+  const scaleStart = viewportWidth > 991 ? 1.3 : 1.3;
 
   gsap.fromTo(
     ".footer-main .data-zoom-in-footer",
     { scale: scaleStart, "will-change": "transform" },
     {
-      scale: 1,
-      duration: 0.5,
+      scale: 0.8,
+      duration: 0.4,
       ease: "none",
       scrollTrigger: {
         trigger: ".footer-ovl .data-zoom-in-footer",
-        start: "top 75%",
+        start: "top 90%",
         scrub: true
         // markers: true
       }
     }
   );
-
-  // ScrollTrigger.create({
-  //   trigger: ".footer-ovl .data-zoom-in-footer",
-  //   start: "top 80%",
-  //   end: "bottom 20%",
-  //   toggleClass: {
-  //     targets: ".footer-ovl .data-zoom-in-footer",
-  //     className: "active"
-  //   },
-  //   markers: true,
-  //   scrub: false
-  // });
 }
 
 function hero() {
