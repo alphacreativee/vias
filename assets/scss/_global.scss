@@ -170,8 +170,12 @@ main {
   opacity: 1;
 
   @media (max-width: 991px) {
-    right: 16px;
+    right: 40px;
     bottom: 80px;
+  }
+
+  @media (max-width: 767px) {
+    right: 16px;
   }
 
   &.hide {

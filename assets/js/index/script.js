@@ -15,18 +15,34 @@ function header() {
       self.progress === 0 ? $("header").removeClass("header--scroll") : "";
       // self.direction === 1 ? $("header").addClass("header--scroll") : "";
 
-      if (self.progress > 0.004) {
-        $("header").addClass("header--scroll");
-      } else {
-        $("header").removeClass("header--scroll");
-      }
-
-      // self.progress === 0 ? $(".cta-mess").removeClass("hide") : "";
       self.direction === 1
         ? $(".cta-mess").addClass("hide")
         : $(".cta-mess").removeClass("hide");
+
+      self.progress === 0
+        ? $("header").removeClass("header--scroll")
+        : $("header").addClass("header--scroll");
     }
   });
+
+  // ScrollTrigger.create({
+  //   trigger: ".hero",
+  //   start: "top top",
+  //   end: "bottom bottom",
+  //   onUpdate: (self) => {
+  //     if (self.progress >= 0.5) {
+  //       $(".cta-mess").removeClass("d-none");
+  //     } else {
+  //       $(".cta-mess").addClass("d-none");
+  //     }
+
+  //     if (self.direction === 1) {
+  //       $(".cta-mess").addClass("hide");
+  //     } else {
+  //       $(".cta-mess").removeClass("hide");
+  //     }
+  //   }
+  // });
 }
 
 function footer() {
@@ -319,8 +335,15 @@ function sectionImage() {
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
-        const targetWidth =
-          viewportWidth > 991 ? viewportWidth - 160 : viewportWidth - 32;
+        let targetWidth = viewportWidth - 32;
+        if (viewportWidth > 991) {
+          targetWidth = viewportWidth - 160;
+        } else if (viewportWidth > 767) {
+          targetWidth = viewportWidth - 80;
+        } else {
+          targetWidth = viewportWidth - 32;
+        }
+
         const widthClipPercentage =
           ((viewportWidth - targetWidth) / 2 / viewportWidth) * 100;
 

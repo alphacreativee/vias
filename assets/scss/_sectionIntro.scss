@@ -4,6 +4,10 @@
       padding: 0 80px;
 
       @media (max-width: 991px) {
+        padding: 0 40px;
+      }
+
+      @media (max-width: 767px) {
         padding: 0 16px;
       }
 
@@ -19,6 +23,10 @@
           padding: 80px 97px 80px 72px;
 
           @media (max-width: 991px) {
+            padding: 40px;
+          }
+
+          @media (max-width: 767px) {
             padding: 24px;
           }
         }
@@ -41,6 +49,10 @@
         aspect-ratio: 869 / 501;
         position: relative;
         height: 500px;
+
+        @media (min-width: 1441px) {
+          height: 600px;
+        }
 
         @media (max-width: 991px) {
           width: 100%;
@@ -96,6 +108,10 @@
         background-color: var(--color-white);
 
         @media (max-width: 991px) {
+          padding: 40px;
+        }
+
+        @media (max-width: 767px) {
           padding: 24px;
         }
 

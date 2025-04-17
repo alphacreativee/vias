@@ -5,6 +5,10 @@
     padding: 80px 84px;
 
     @media (max-width: 991px) {
+      padding: 88px 40px 0;
+    }
+
+    @media (max-width: 767px) {
       padding: 88px 16px 0;
     }
 
