@@ -106,9 +106,14 @@ footer {
 
     &-contact {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 40px;
+      gap: 0 40px;
+
+      a {
+        min-width: max-content;
+      }
 
       @media (max-width: 991px) {
         display: flex;

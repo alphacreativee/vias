@@ -125,6 +125,11 @@ function hero() {
 
   const fxTitle = document.querySelectorAll("[data-splitting]");
   fxTitle.forEach((element) => {
+    const isMobile = window.innerWidth < 768;
+    const disableMobile = element.hasAttribute("data-disable-mobile");
+
+    if (isMobile && disableMobile) return;
+
     const chars = element.querySelectorAll(".char");
     gsap.fromTo(
       chars,
@@ -157,6 +162,7 @@ function discover() {
     speed: 1000,
     spaceBetween: 16,
     loopAdditionalSlides: 8,
+    parallax: true,
     navigation: {
       nextEl: ".section-discover .swiper-button-next",
       prevEl: ".section-discover .swiper-button-prev"
@@ -248,7 +254,14 @@ function customDropdown() {
 function animation() {
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
+  gsap.utils.toArray(".data-fade-in").forEach((element) => {
+    const isMobile = window.innerWidth < 768;
+    const disableMobile = element.hasAttribute("data-disable-mobile");
+
+    if (isMobile && disableMobile) return;
+
+    let posOffset = element.getAttribute("data-offset") || "70%";
+
     gsap.fromTo(
       element,
       {
@@ -256,17 +269,17 @@ function animation() {
         y: 20
       },
       {
-        scrollTrigger: {
-          trigger: element,
-          start: "top 70%",
-          end: "bottom 70%"
-          // markers: true
-        },
         opacity: 1,
         y: 0,
         duration: 1,
         ease: "power1.out",
-        stagger: 0.1
+        scrollTrigger: {
+          trigger: element,
+          start: `top ${posOffset}`,
+          end: `bottom ${posOffset}`
+          // toggleActions: "play none none reverse"
+          // markers: true
+        }
       }
     );
   });
