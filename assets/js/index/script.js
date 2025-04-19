@@ -1,13 +1,27 @@
 import { preloadImages } from "../../libs/utils.js";
-let lenis;
+// let lenis;
+
+const lenis = new Lenis({
+  smooth: true,
+  lerp: 0.1,
+  smoothTouch: true,
+  normalizeWheel: true
+});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
 Splitting();
 
 ("use strict");
 $ = jQuery;
 
 function header() {
-  ScrollTrigger.refresh();
-
   ScrollTrigger.create({
     start: "top top",
     end: 99999,
@@ -24,30 +38,9 @@ function header() {
         : $("header").addClass("header--scroll");
     }
   });
-
-  // ScrollTrigger.create({
-  //   trigger: ".hero",
-  //   start: "top top",
-  //   end: "bottom bottom",
-  //   onUpdate: (self) => {
-  //     if (self.progress >= 0.5) {
-  //       $(".cta-mess").removeClass("d-none");
-  //     } else {
-  //       $(".cta-mess").addClass("d-none");
-  //     }
-
-  //     if (self.direction === 1) {
-  //       $(".cta-mess").addClass("hide");
-  //     } else {
-  //       $(".cta-mess").removeClass("hide");
-  //     }
-  //   }
-  // });
 }
 
 function footer() {
-  ScrollTrigger.refresh();
-
   const viewportWidth = window.innerWidth;
   const scaleStart = viewportWidth > 991 ? 1.3 : 1.3;
 
@@ -252,8 +245,6 @@ function customDropdown() {
 }
 
 function animation() {
-  gsap.registerPlugin(ScrollTrigger);
-
   gsap.utils.toArray(".data-fade-in").forEach((element) => {
     const isMobile = window.innerWidth < 768;
     const disableMobile = element.hasAttribute("data-disable-mobile");
@@ -395,16 +386,7 @@ function sectionImage() {
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
-
-  // const lenis = new Lenis({
-  //   lerp: 0.09
-  // });
-
-  // lenis.on("scroll", ScrollTrigger.update);
-
-  // gsap.ticker.add((time) => {
-  //   lenis.raf(time * 1000);
-  // });
+  ScrollTrigger.refresh();
 
   header();
   footer();
@@ -413,7 +395,6 @@ const init = () => {
   customDropdown();
   animation();
   sectionImage();
-  ScrollTrigger.refresh();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

@@ -2,6 +2,8 @@ body {
   background-color: #f4f1ec;
   font-family: var(--font-body);
   transition: background-color 0.4s ease;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 
   &.discover-active {
     background-color: var(--color-white);
@@ -135,6 +137,10 @@ main {
     border-radius: 8px;
     padding: 8px;
     // box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+
+    @media (max-width: 991px) {
+      min-width: unset;
+    }
 
     .dropdown-custom__item {
       width: 100%;
