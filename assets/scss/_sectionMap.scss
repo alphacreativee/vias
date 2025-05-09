@@ -1,0 +1,16 @@
+.section-map {
+  &__wrapper {
+    padding: 0 80px;
+  }
+
+  .map {
+    margin-top: 64px;
+    width: 100%;
+    aspect-ratio: 1280 / 640;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

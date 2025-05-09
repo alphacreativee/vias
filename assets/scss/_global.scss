@@ -42,6 +42,14 @@ main {
   }
 }
 
+.spacing-140 {
+  height: 140px;
+
+  @media (max-width: 991px) {
+    height: 64px;
+  }
+}
+
 @media (max-width: 991px) {
   .spacing-mb-10 {
     height: 10px !important;
