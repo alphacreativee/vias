@@ -32,6 +32,18 @@
         justify-content: space-between;
         height: 100%;
         background-color: var(--color-white);
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          img.done {
+            transform: scale(1.05) !important;
+          }
+
+          .item-text {
+            color: var(--color-primary);
+          }
+        }
 
         @media (max-width: 991px) {
           padding: 24px 24px 0;
@@ -52,12 +64,22 @@
         -webkit-line-clamp: 4; /* number of lines to show */
         line-clamp: 4;
         -webkit-box-orient: vertical;
+        transition: all 0.4s ease;
       }
 
       &-image {
         width: 100%;
         aspect-ratio: 254 / 370;
         transform: translateY(24px);
+
+        img.done {
+          transition-property: -webkit-transform;
+          transition-property: transform;
+          transition-property: transform, -webkit-transform;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 1000ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
         @media (max-width: 991px) {
           aspect-ratio: 295 / 347;

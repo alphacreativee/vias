@@ -311,7 +311,10 @@ function animation() {
         scrollTrigger: {
           trigger: element,
           start: "top 70%",
-          end: "bottom 70%"
+          end: "bottom 70%",
+          onEnter: () => {
+            element.classList.add("done");
+          }
           // markers: true
         },
         scale: 1,
