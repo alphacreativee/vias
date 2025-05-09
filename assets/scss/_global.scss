@@ -245,6 +245,20 @@ main {
     }
   }
 
+  &.underline-first {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
