@@ -7,7 +7,7 @@
   width: 100%;
   transition: all 0.4s ease;
   overflow: hidden;
-
+  pointer-events: none;
   @media (max-width: 991px) {
     height: 112px;
     // width: 100vw;
@@ -16,10 +16,12 @@
   &.header--scroll {
     .header-wrapper {
       transform: translateY(-167px);
+      pointer-events: none;
     }
 
     .header-scroll {
       transform: translateY(-167px);
+      pointer-events: auto;
     }
   }
 
@@ -34,6 +36,7 @@
     opacity: 1;
     visibility: visible;
     transition: all 0.4s ease;
+    pointer-events: auto;
     @media (max-width: 991px) {
       padding: 20px;
     }
@@ -72,6 +75,7 @@
     // visibility: hidden;
     transition: all 0.4s ease;
     transform: translateY(-240px);
+    pointer-events: none;
     &-wrapper {
       display: grid;
       grid-template-columns: 1fr 10fr 1fr;

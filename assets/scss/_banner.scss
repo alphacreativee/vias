@@ -44,7 +44,7 @@
     z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: var(--color-white);
 
@@ -94,7 +94,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    left: 75px;
+    left: 120px;
     bottom: 48px;
     right: unset;
     top: unset;
@@ -131,7 +131,7 @@
     align-items: center;
     gap: 20px;
     position: absolute;
-    right: 75px;
+    right: 120px;
     bottom: 48px;
 
     @media (max-width: 991px) {
