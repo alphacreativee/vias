@@ -184,6 +184,29 @@ function discover() {
   });
 }
 
+function sectionTestimonials() {
+  if ($(".section-testimonials").length < 1) return;
+
+  var swiperTestimonials = new Swiper(".testimonials-slider", {
+    slidesPerView: 4,
+    loop: false,
+    speed: 1000,
+    spaceBetween: 24,
+    loopAdditionalSlides: 8,
+    parallax: false,
+    navigation: {
+      nextEl: ".testimonials-arrow .swiper-button-next",
+      prevEl: ".testimonials-arrow .swiper-button-prev",
+    },
+    breakpoints: {
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+    },
+  });
+}
+
 function customDropdown() {
   const $dropdowns = $(".dropdown-custom");
 
@@ -289,6 +312,9 @@ function animation() {
           trigger: element,
           start: "top 70%",
           end: "bottom 70%",
+          onEnter: () => {
+            element.classList.add("done");
+          },
           // markers: true
         },
         scale: 1,
@@ -447,6 +473,7 @@ const init = () => {
   animation();
   sectionImage();
   sliderParallax();
+  sectionTestimonials();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

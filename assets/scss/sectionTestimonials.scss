@@ -1,0 +1,112 @@
+.section-testimonials {
+  .testimonials-wapper {
+    padding: 0 80px;
+  }
+
+  .testimonials-slider {
+    margin-top: 48px;
+
+    .item {
+      &-wrapper {
+        padding: 40px;
+        background-color: var(--color-white);
+
+        display: flex;
+        flex-direction: column;
+        min-height: 428px;
+      }
+
+      &-avt {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid var(--color-secondary);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-desc {
+        margin-top: 40px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }
+
+      &-bottom {
+        margin-top: auto;
+      }
+
+      &-link {
+        position: relative;
+        svg path {
+          transition: all 0.4s ease;
+        }
+        &:hover {
+          svg {
+            path {
+              fill: var(--color-primary);
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .testimonials-arrow {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: unset;
+      transform: none;
+      margin: 0;
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--color-secondary);
+      border-radius: 50%;
+      transition: all 0.4s ease;
+
+      &:hover {
+        background-color: var(--color-secondary);
+        path {
+          stroke: var(--color-white);
+        }
+      }
+
+      svg {
+        width: 12px;
+        height: 12px;
+
+        path {
+          transition: all 0.4s ease;
+          stroke: var(--color-secondary);
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
