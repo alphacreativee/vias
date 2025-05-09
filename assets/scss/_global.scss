@@ -235,13 +235,23 @@ main {
   position: relative;
   text-decoration: none;
 
+  &.color-secondary {
+    &:hover {
+      color: var(--color-secondary);
+    }
+
+    &::before {
+      background-color: var(--color-secondary);
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 1px;
     background-color: var(--color-white);
-    bottom: 0px;
+    bottom: -4px;
     left: 0;
     transform: scaleX(0);
     transform-origin: bottom right;
