@@ -31,6 +31,15 @@
     .detail-sm,
     .detail-time {
       margin-bottom: 40px;
+      a {
+        color: var(--color-secondary);
+        &:hover {
+          color: var(--color-secondary);
+        }
+        &::before {
+          background-color: var(--color-secondary);
+        }
+      }
     }
     .list-button {
       display: flex;
