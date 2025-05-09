@@ -118,6 +118,28 @@
           }
         }
       }
+      .col-lang {
+        display: flex;
+        align-items: center;
+        .dropdown-custom__menu {
+          background-color: var(--color-primary);
+          left: -10px;
+          min-width: 40px;
+          border-radius: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          top: 40px;
+        }
+        .language__item {
+          display: inline-block;
+          text-align: center;
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

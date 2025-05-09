@@ -1,0 +1,28 @@
+.two-col-content {
+  padding: 140px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  .col-content {
+    h3 {
+      margin-bottom: 40px;
+    }
+    ul {
+      padding-left: 20px;
+      li {
+        p {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            width: 2px;
+            height: 2px;
+            background-color: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}
