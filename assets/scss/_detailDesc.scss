@@ -11,8 +11,18 @@
   &.restaurant {
     background-image: url("../../images/use/bg-desc-restaurant.png");
   }
+  &.offer {
+    .detail-description-box {
+      text-align: left;
+      .list-button {
+        justify-content: flex-start;
+        margin-top: 40px;
+      }
+    }
+  }
   &-box {
     text-align: center;
+
     h2 {
       margin-bottom: 24px;
     }
@@ -45,6 +55,22 @@
       display: flex;
       justify-content: center;
       gap: 16px;
+    }
+  }
+  .description-multiline {
+    p {
+      color: var(--color-secondary);
+      font-weight: 300;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 40px;
+      li {
+        * {
+          color: var(--color-secondary);
+          font-weight: 300;
+        }
+      }
     }
   }
 }
