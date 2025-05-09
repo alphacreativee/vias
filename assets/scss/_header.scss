@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   background-color: transparent;
-  height: 167px;
   width: 100%;
   transition: all 0.4s ease;
   overflow: hidden;
@@ -15,8 +14,13 @@
   }
 
   &.header--scroll {
-    opacity: 0;
-    visibility: hidden;
+    .header-wrapper {
+      transform: translateY(-167px);
+    }
+
+    .header-scroll {
+      transform: translateY(-167px);
+    }
   }
 
   &-wrapper {
@@ -24,7 +28,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-
+    height: 167px;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease;
     @media (max-width: 991px) {
       padding: 20px;
     }
@@ -36,7 +45,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -50%);
 
     @media (max-width: 991px) {
       width: 124px;
@@ -55,6 +64,56 @@
     .dropdown-custom .dropdown-custom__text,
     .dropdown-custom__menu .dropdown-custom__item {
       text-transform: uppercase;
+    }
+  }
+  &-scroll {
+    background-color: var(--color-secondary);
+    // opacity: 0;
+    // visibility: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(-240px);
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 10fr 1fr;
+      height: 72px;
+      .col-main {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 40px 1fr;
+        gap: 64px;
+
+        .logo-scroll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .col-menu {
+        display: flex;
+        align-items: center;
+        &.left {
+          display: flex;
+          justify-content: flex-end;
+        }
+        &.right {
+          display: flex;
+          justify-content: flex-start;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          li {
+            a {
+              &:hover {
+                color: var(--color-white);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
