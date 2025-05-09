@@ -1,6 +1,12 @@
 .section-desc {
   padding: 0 80px;
-
+  &.normal-style {
+    .desc {
+      font-size: 36px;
+      line-height: 44px;
+      font-style: normal;
+    }
+  }
   @media (max-width: 676px) {
     padding: 0 16px;
   }
