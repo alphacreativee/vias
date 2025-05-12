@@ -349,6 +349,30 @@ function animation() {
       }
     );
   });
+  gsap.utils.toArray(".intro-content").forEach((container) => {
+    const box = container.querySelector(".box");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        scrub: true,
+        pin: false,
+        // markers: true,
+      },
+    });
+
+    tl.fromTo(
+      box,
+      {
+        yPercent: -10,
+        ease: "none",
+      },
+      {
+        yPercent: 10,
+        ease: "none",
+      }
+    );
+  });
 }
 
 function sectionImage() {
