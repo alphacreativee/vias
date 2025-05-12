@@ -430,6 +430,30 @@ function animation() {
       }
     );
   });
+  gsap.utils.toArray(".intro-content").forEach((container) => {
+    const box = container.querySelector(".box");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        scrub: true,
+        pin: false,
+        // markers: true,
+      },
+    });
+
+    tl.fromTo(
+      box,
+      {
+        yPercent: -10,
+        ease: "none",
+      },
+      {
+        yPercent: 10,
+        ease: "none",
+      }
+    );
+  });
 }
 
 function sectionImage() {
@@ -561,6 +585,40 @@ function gallery() {
     });
   });
 }
+function filterGalleryMobile() {
+  const filterContainer = document.querySelector(".fitler-mobile");
+  if (!filterContainer) return;
+
+  const filterValue = filterContainer.querySelector(".filter-value-select");
+  const filterHead = filterContainer.querySelector(".filter-head");
+  const filterBody = filterContainer.querySelector(".filter-body");
+  const filterButtons = filterBody.querySelectorAll(".nav-link");
+
+  if (!filterValue || !filterHead || !filterBody || filterButtons.length === 0)
+    return;
+
+  // Toggle filter list visibility
+  filterValue.addEventListener("click", () => {
+    filterHead.classList.toggle("active");
+    filterBody.classList.toggle("active");
+  });
+
+  // Handle option click
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const titleEl = btn.querySelector(".title");
+      if (!titleEl) return;
+
+      const selectedText = titleEl.textContent.trim();
+      filterValue.textContent = selectedText;
+
+      // Close dropdown
+      filterHead.classList.remove("active");
+      filterBody.classList.remove("active");
+    });
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
@@ -576,6 +634,7 @@ const init = () => {
   sliderParallax();
   sectionTestimonials();
   gallery();
+  filterGalleryMobile();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
