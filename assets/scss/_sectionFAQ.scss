@@ -1,0 +1,70 @@
+.section-faq {
+  .content-top {
+    .desc {
+      margin-top: 24px;
+    }
+  }
+
+  .content-bottom {
+    margin-top: 80px;
+    .accordion-item {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid var(--color-secondary);
+      border-radius: unset;
+      transition: all 0.4s ease;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      &:has(.accordion-button[aria-expanded="true"]) {
+        background-color: var(--color-white);
+        border-color: transparent;
+      }
+    }
+
+    .accordion-button {
+      background-color: transparent;
+      color: var(--color-secondary);
+      box-shadow: none;
+      padding: 24px;
+      border-radius: unset;
+
+      &::after {
+        width: 24px;
+        height: 24px;
+        background-size: 100% 100%;
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M12%2019V5M19%2012H5%22%20stroke%3D%22%23543929%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E");
+      }
+
+      &:not(.collapsed)::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .accordion-body {
+      padding: 24px;
+      position: relative;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--color-secondary);
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: calc(100% - 48px);
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 24px;
+        background-color: rgba($color: #543929, $alpha: 0.3);
+      }
+    }
+  }
+}

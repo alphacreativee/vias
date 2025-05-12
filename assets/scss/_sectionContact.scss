@@ -1,0 +1,52 @@
+.section-contact {
+  padding: 192px 0 120px;
+  background-image: var(--bg-contact);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .contact-wrapper {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .form {
+    padding: 48px;
+    background-color: var(--color-white);
+
+    .field {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(#543929, $alpha: 0.4);
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color-secondary);
+        padding-bottom: 16px;
+
+        &::placeholder {
+          color: rgba(#543929, $alpha: 0.4);
+        }
+      }
+
+      textarea {
+        min-height: 64px;
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 40px;
+      min-height: 44px;
+    }
+  }
+}
