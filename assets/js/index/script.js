@@ -460,7 +460,26 @@ function sliderParallax() {
     },
   });
 }
-
+function gallery() {
+  if (!document.querySelector(".animated-thumb")) return;
+  document.querySelectorAll(".animated-thumb").forEach((gallery) => {
+    lightGallery(gallery, {
+      selector: ".thumb-img",
+      thumbnail: true,
+      download: false,
+      height: "100%",
+      width: "100%",
+      iframeMaxWidth: "100%",
+      subHtmlSelectorRelative: true,
+      showCloseIcon: true,
+      mobileSettings: {
+        controls: true,
+        showCloseIcon: true,
+        download: false,
+      },
+    });
+  });
+}
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
@@ -474,6 +493,7 @@ const init = () => {
   sectionImage();
   sliderParallax();
   sectionTestimonials();
+  gallery();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
