@@ -2,6 +2,11 @@
   &-container {
     .nav {
       margin-bottom: 60px;
+      position: sticky;
+      top: 72px;
+      z-index: 2;
+
+      background-color: #f4f1ec;
       &-link {
         padding: 8px 12px;
         &.active {
@@ -20,6 +25,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    @media (max-width: 991px) {
+      padding: 0 24px;
+      grid-template-columns: 1fr;
+    }
   }
 
   &-img {
