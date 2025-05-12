@@ -5,7 +5,7 @@ footer {
   overflow: hidden;
 
   .footer-wrapper {
-    padding: 40px 80px 24px;
+    padding: 72px 80px 24px;
     position: relative;
     z-index: 2;
 
@@ -32,6 +32,9 @@ footer {
       width: 200px;
       aspect-ratio: 199 / 104;
       margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
 
       img {
         width: 100%;
@@ -162,6 +165,68 @@ footer {
 
         @media (max-width: 991px) {
           align-items: center;
+        }
+      }
+
+      &__left {
+        margin-top: auto;
+
+        a {
+          &:hover {
+            color: var(--color-white);
+          }
+        }
+      }
+
+      &__center {
+        margin-top: auto;
+      }
+
+      .social {
+        min-width: 235px;
+        margin-top: 40px;
+        margin-bottom: 112px;
+      }
+
+      .newsletter {
+        min-width: 235px;
+        h4 {
+          margin-bottom: 24px;
+        }
+
+        input {
+          border: none;
+          border-bottom: 1px solid var(--color-white);
+          color: var(--color-white);
+          font-size: 12px;
+          line-height: 20px;
+          width: 100%;
+
+          &::placeholder {
+            color: var(--color-white);
+          }
+        }
+
+        form {
+          display: flex;
+          gap: 24px;
+        }
+
+        button {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          border: 1px solid var(--color-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          transition: all 0.4s ease;
+
+          &:hover {
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-primary);
+          }
         }
       }
     }
