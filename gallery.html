@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facilities</title>
+    <title>Gallery</title>
     <!-- import favicon -->
     <link
       rel="icon"
@@ -28,6 +28,10 @@
     <!-- font -->
     <link rel="stylesheet" href="./assets/fonts/MabryPro/stylesheet.css" />
     <link rel="stylesheet" href="./assets/fonts/SuperDisplay/stylesheet.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="./assets/fonts/PhotographFont/stylesheet.css"
@@ -98,7 +102,7 @@
                   </li>
                   <li>
                     <a
-                      href="./dining.html"
+                      href="./restaurant.html"
                       class="b2-font color-white text-uppercase link-hover active"
                       >Dining</a
                     >
@@ -127,14 +131,14 @@
                   <li>
                     <a
                       href="./service.html"
-                      class="b2-font color-white text-uppercase link-hover"
+                      class="b2-font color-white text-uppercase link-hover active"
                       >Services</a
                     >
                   </li>
                   <li>
                     <a
                       href="./event.html"
-                      class="b2-font color-white text-uppercase link-hover"
+                      class="b2-font color-white text-uppercase link-hover active"
                       >Meeting & event</a
                     >
                   </li>
@@ -199,7 +203,7 @@
     <main>
       <section class="hero position-relative text-white">
         <div class="hero-image">
-          <img src="./assets/images/banner-facilities.png" alt="" />
+          <img src="./assets/images/banner-gallery.png" alt="" />
         </div>
       </section>
 
@@ -208,100 +212,345 @@
         <div class="container-fluid p-0">
           <div class="row g-0 justify-content-center">
             <div class="col-lg-8">
-              <div class="desc">
-                Van Phong Bay – "The Sleeping Princess" of the seas, one of the
-                world's most beautiful bays with its tropical climate, pristine
-                beauty and poetic charm. Distinguished by fine sandy beaches,
-                gentle waves, crystal-clear turquoise waters, and year-round
-                warm sunshine.
+              <div class="desc data-fade-in">
+                At Vias Van Phong, every smile, every sunset, and every shared
+                laugh becomes a treasured memory. Whether it’s a family
+                vacation, a romantic escape, or a joyful gathering with friends,
+                our resort is where moments turn into stories. Let our stunning
+                views and heartfelt hospitality be the backdrop to the memories
+                you’ll carry forever.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="spacing-120"></div>
+      <section class="gallery-sec">
+        <div class="container-fluid p-0">
+          <div class="gallery-sec-container">
+            <ul
+              class="nav nav-pills justify-content-center data-fade-in"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="gallery-1"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-1"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-1"
+                  aria-selected="true"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    all
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-2"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-2"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-2"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    building & suites
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-3"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-3"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-3"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    dinning
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-4"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-4"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-4"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    offers
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-5"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-5"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-5"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    facilities
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-6"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-6"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-6"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    Services
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="gallery-7"
+                  data-bs-toggle="pill"
+                  data-bs-target="#gallery-content-7"
+                  type="button"
+                  role="tab"
+                  aria-controls="gallery-content-7"
+                  aria-selected="false"
+                >
+                  <div
+                    class="title b2s-font color-secondary text-uppercase link-hover"
+                  >
+                    Meeting & event
+                  </div>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content data-fade-in" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="gallery-content-1"
+                role="tabpanel"
+                aria-labelledby="gallery-1"
+              >
+                <div class="gallery-sec-list animated-thumb">
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-1.png"
+                      data-sub-html="<h4>Room</h4"
+                    >
+                      <img src="./assets/images/gallery-1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-2.png"
+                      data-sub-html="<h4>Dinning</h4"
+                    >
+                      <img src="./assets/images/gallery-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-3.png"
+                      data-sub-html="<h4>Offers</h4"
+                    >
+                      <img src="./assets/images/gallery-3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-4.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-5.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-5.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-2.png"
+                      data-sub-html="<h4>Dinning</h4"
+                    >
+                      <img src="./assets/images/gallery-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-3.png"
+                      data-sub-html="<h4>Offers</h4"
+                    >
+                      <img src="./assets/images/gallery-3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-4.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-5.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-2"
+                role="tabpanel"
+                aria-labelledby="gallery-2"
+              >
+                <div class="gallery-sec-list animated-thumb">
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-1.png"
+                      data-sub-html="<h4>Room</h4"
+                    >
+                      <img src="./assets/images/gallery-1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-2.png"
+                      data-sub-html="<h4>Dinning</h4"
+                    >
+                      <img src="./assets/images/gallery-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-3.png"
+                      data-sub-html="<h4>Offers</h4"
+                    >
+                      <img src="./assets/images/gallery-3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-4.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="gallery-sec-item">
+                    <div
+                      class="gallery-sec-img thumb-img"
+                      data-src="./assets/images/gallery-5.png"
+                      data-sub-html="<h4>Faclitiy</h4"
+                    >
+                      <img src="./assets/images/gallery-5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-3"
+                role="tabpanel"
+                aria-labelledby="gallery-3"
+              >
+                ...3
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-4"
+                role="tabpanel"
+                aria-labelledby="gallery-4"
+              >
+                ...3
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-5"
+                role="tabpanel"
+                aria-labelledby="gallery-5"
+              >
+                ...3
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-6"
+                role="tabpanel"
+                aria-labelledby="gallery-6"
+              >
+                ...3
+              </div>
+              <div
+                class="tab-pane fade"
+                id="gallery-content-7"
+                role="tabpanel"
+                aria-labelledby="gallery-7"
+              >
+                ...7
               </div>
             </div>
           </div>
         </div>
       </section>
       <div class="spacing-120"></div>
-      <section class="section-facilities">
-        <div class="container-fluid facilities_wrapper">
-          <ul class="row list-item data-fade-in mt-0">
-            <li class="item col-lg-3 col-md-6 col-12">
-              <div class="item-wrapper">
-                <div class="item-text">
-                  State-of-the-art grand conference pavilion
-                </div>
-                <div class="item-image overflow-hidden">
-                  <img
-                    src="./assets/images/image-box-1.png"
-                    class="data-zoom-in"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <a
-                href="#"
-                class="link-hover b1-font color-secondary underline-first"
-                >See more</a
-              >
-            </li>
-            <li class="item col-lg-3 col-md-6 col-12">
-              <div class="item-wrapper">
-                <div class="item-text">Seawater swimming pool and gym</div>
-                <div class="item-image overflow-hidden">
-                  <img
-                    src="./assets/images/image-box-1.png"
-                    class="data-zoom-in"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <a
-                href="#"
-                class="link-hover b1-font color-secondary underline-first"
-                >See more</a
-              >
-            </li>
-            <li class="item col-lg-3 col-md-6 col-12">
-              <div class="item-wrapper">
-                <div class="item-text">
-                  Private beach enclave for curated sporting and leisure
-                  pursuits
-                </div>
-                <div class="item-image overflow-hidden">
-                  <img
-                    src="./assets/images/image-box-1.png"
-                    class="data-zoom-in"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <a
-                href="#"
-                class="link-hover b1-font color-secondary underline-first"
-                >See more</a
-              >
-            </li>
-            <li class="item col-lg-3 col-md-6 col-12">
-              <div class="item-wrapper">
-                <div class="item-text">
-                  Gourmet tropical restaurant and exclusive lounge bar
-                </div>
-                <div class="item-image overflow-hidden">
-                  <img
-                    src="./assets/images/image-box-1.png"
-                    class="data-zoom-in"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <a
-                href="#"
-                class="link-hover b1-font color-secondary underline-first"
-                >See more</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-      <div class="spacing-140"></div>
     </main>
     <div class="cta-mess">
       <a href="#" class="messenger">
@@ -913,6 +1162,7 @@
     <script src="./assets/libs/bootstrap.bundle.min.js"></script>
     <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
     <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/lightgallery.umd.min.js"></script>
     <!-- import custom js -->
     <script type="module" src="./assets/main/js/script.min.js"></script>
 
