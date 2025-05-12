@@ -5,7 +5,7 @@ const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
   smoothTouch: true,
-  normalizeWheel: true
+  normalizeWheel: true,
 });
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -39,7 +39,7 @@ function header() {
       } else {
         $(".cta-mess").removeClass("hide");
       }
-    }
+    },
   });
 }
 
@@ -57,9 +57,9 @@ function footer() {
       scrollTrigger: {
         trigger: ".footer-ovl .data-zoom-in-footer",
         start: "top 90%",
-        scrub: true
+        scrub: true,
         // markers: true
-      }
+      },
     }
   );
 }
@@ -89,7 +89,7 @@ function hero() {
       preloadImages: true,
       parallax: true,
       lazy: {
-        loadPrevNext: true
+        loadPrevNext: true,
       },
       allowTouchMove: false,
       simulateTouch: false,
@@ -104,18 +104,18 @@ function hero() {
             <circle class="circle-origin" cx="14" cy="14" r="13" stroke="white"/>
             </svg>
             </button>`;
-        }
+        },
       },
       navigation: {
         nextEl: ".hero .swiper-button-next",
-        prevEl: ".hero .swiper-button-prev"
+        prevEl: ".hero .swiper-button-prev",
       },
       on: {
         init: function () {
           let $this = this;
           $($this.slides[$this.activeIndex]);
-        }
-      }
+        },
+      },
     });
   });
 
@@ -132,7 +132,7 @@ function hero() {
       {
         "will-change": "opacity, transform",
         opacity: 0,
-        y: 20
+        y: 20,
       },
       {
         opacity: 1,
@@ -141,9 +141,9 @@ function hero() {
         scrollTrigger: {
           trigger: element,
           start: "top 60%",
-          end: "bottom 60%"
+          end: "bottom 60%",
           // markers: true,
-        }
+        },
       }
     );
   });
@@ -161,14 +161,14 @@ function discover() {
     parallax: true,
     navigation: {
       nextEl: ".section-discover .swiper-button-next",
-      prevEl: ".section-discover .swiper-button-prev"
+      prevEl: ".section-discover .swiper-button-prev",
     },
     breakpoints: {
       991: {
         slidesPerView: 2,
-        spaceBetween: 24
-      }
-    }
+        spaceBetween: 24,
+      },
+    },
   });
 
   ScrollTrigger.create({
@@ -177,10 +177,10 @@ function discover() {
     end: "bottom 60%",
     toggleClass: {
       targets: "body, main",
-      className: "discover-active"
+      className: "discover-active",
     },
     // markers: true,
-    scrub: false
+    scrub: false,
   });
 }
 
@@ -196,96 +196,27 @@ function sectionTestimonials() {
     parallax: false,
     navigation: {
       nextEl: ".testimonials-arrow .swiper-button-next",
-      prevEl: ".testimonials-arrow .swiper-button-prev"
+      prevEl: ".testimonials-arrow .swiper-button-prev",
     },
     breakpoints: {
       991: {
         slidesPerView: 4,
-        spaceBetween: 24
-      }
-    }
-  });
-}
-
-// loading
-$(window).on("load", function () {
-  HideLoad();
-});
-
-function RevealLoad() {
-  const tl = gsap.timeline({
-    defaults: { duration: 1.5, ease: "none" }
-  });
-  const $loading = $(".loading");
-
-  tl.set($loading, {
-    autoAlpha: 1,
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-    "will-change": "clip-path"
-  });
-  tl.to($loading, {
-    clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-    transformOrigin: "center bottom"
-  }).to(
-    $loading.find(".loading-inner"),
-    {
-      autoAlpha: 1
+        spaceBetween: 24,
+      },
     },
-    0.5
-  );
+  });
 }
 
-function HideLoad() {
-  const $loading = $(".loading");
-  const $fadeUpSplitText = $(".anim-fade-up-split-text");
-  $fadeUpSplitText.length && $fadeUpSplitText.lettering("words");
-
+function loading() {
   const tl = gsap.timeline({
-    onComplete: () => {
-      if (localStorage.getItem("hashLink")) {
-        $(window).scrollTop(
-          $(`#${localStorage.getItem("hashLink")}`).offset().top -
-            $(".header").height()
-        );
-        localStorage.removeItem("hashLink");
-      }
-    }
+    defaults: { duration: 2, ease: "power2.inOut" },
   });
 
-  tl.to($loading.find(".logo"), {
-    autoAlpha: 0,
-    duration: 1.3,
-    ease: Expo.easeInOut
-  })
-    .to(
-      $loading,
-      {
-        duration: 1.5,
-        // scaleY: 0,
-        clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-        transformOrigin: "center top",
-        ease: Expo.easeInOut
-      },
-      0.4
-    )
-    .to($loading, {
-      autoAlpha: 0,
-      duration: 0
-    });
-
-  $fadeUpSplitText.length &&
-    tl.to(
-      $fadeUpSplitText.find("span"),
-      {
-        duration: 0.8,
-        autoAlpha: 1,
-        rotate: 0,
-        y: 0,
-        stagger: 0.1,
-        ease: Power4.ease
-      },
-      1.2
-    );
+  tl.fromTo(
+    ".loading",
+    { clipPath: "inset(0% 0% 0% 0%)" },
+    { clipPath: "inset(0% 0% 100% 0%)" }
+  );
 }
 
 function customDropdown() {
@@ -364,7 +295,7 @@ function animation() {
       element,
       {
         opacity: 0,
-        y: 20
+        y: 20,
       },
       {
         opacity: 1,
@@ -374,10 +305,10 @@ function animation() {
         scrollTrigger: {
           trigger: element,
           start: `top ${posOffset}`,
-          end: `bottom ${posOffset}`
+          end: `bottom ${posOffset}`,
           // toggleActions: "play none none reverse"
           // markers: true
-        }
+        },
       }
     );
   });
@@ -386,7 +317,7 @@ function animation() {
     gsap.fromTo(
       element,
       {
-        scale: 1.1
+        scale: 1.1,
       },
       {
         scrollTrigger: {
@@ -395,13 +326,13 @@ function animation() {
           end: "bottom 70%",
           onEnter: () => {
             element.classList.add("done");
-          }
+          },
           // markers: true
         },
         scale: 1,
         duration: 0.5,
         ease: "none",
-        stagger: 0.1
+        stagger: 0.1,
       }
     );
   });
@@ -413,20 +344,20 @@ function animation() {
       scrollTrigger: {
         trigger: container,
         scrub: true,
-        pin: false
+        pin: false,
         // markers: true
-      }
+      },
     });
 
     tl.fromTo(
       img,
       {
         yPercent: -10,
-        ease: "none"
+        ease: "none",
       },
       {
         yPercent: 10,
-        ease: "none"
+        ease: "none",
       }
     );
   });
@@ -462,14 +393,14 @@ function sectionImage() {
   gsap.fromTo(
     ".section-image .image-wrapper",
     {
-      clipPath: "inset(0% 0% 0% 0%)"
+      clipPath: "inset(0% 0% 0% 0%)",
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1
+        scrub: 1,
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
@@ -495,25 +426,25 @@ function sectionImage() {
         return `inset(${heightClipPercentage}% ${widthClipPercentage}% ${heightClipPercentage}% ${widthClipPercentage}%)`;
       },
       duration: 0.4,
-      ease: "power2.out"
+      ease: "power2.out",
     }
   );
 
   gsap.fromTo(
     ".section-image .image-wrapper img",
     {
-      scale: 1
+      scale: 1,
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1
+        scrub: 1,
       },
       scale: 1.1,
       duration: 0.4,
-      ease: "power2.out"
+      ease: "power2.out",
     }
   );
 }
@@ -529,7 +460,7 @@ function sliderParallax() {
     keyboardControl: true,
     navigation: {
       nextEl: ".slider-parallax .swiper-button-next",
-      prevEl: ".slider-parallax .swiper-button-prev"
+      prevEl: ".slider-parallax .swiper-button-prev",
     },
     on: {
       progress: function (swiper) {
@@ -561,8 +492,8 @@ function sliderParallax() {
             slideInner.style.transition = speed + "ms " + easing;
           }
         });
-      }
-    }
+      },
+    },
   });
 }
 function gallery() {
@@ -580,8 +511,8 @@ function gallery() {
       mobileSettings: {
         controls: true,
         showCloseIcon: true,
-        download: false
-      }
+        download: false,
+      },
     });
   });
 }
@@ -622,8 +553,8 @@ function filterGalleryMobile() {
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
-
-  RevealLoad();
+  loading();
+  // RevealLoad();
   header();
   footer();
   hero();
