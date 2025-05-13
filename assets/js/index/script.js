@@ -461,7 +461,7 @@ function sliderParallax() {
   if ($(".swiper-parallax-img").length < 1) return;
   const interleaveOffset = 0.9;
   var swiperParallaxImg = new Swiper(".swiper-parallax-img", {
-    loop: true,
+    // loop: true,
     speed: 1500,
     grabCursor: true,
     watchSlidesProgress: true,
@@ -470,6 +470,10 @@ function sliderParallax() {
     navigation: {
       nextEl: ".slider-parallax .swiper-button-next",
       prevEl: ".slider-parallax .swiper-button-prev",
+    },
+    pagination: {
+      el: ".slider-parallax-pagination",
+      type: "progressbar",
     },
     on: {
       progress: function (swiper) {

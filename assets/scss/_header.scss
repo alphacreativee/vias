@@ -197,6 +197,9 @@
         justify-content: flex-start;
         @media (max-width: 991px) {
           justify-content: flex-end;
+          .dropdown-custom__btn {
+            gap: 8px;
+          }
         }
         .dropdown-custom__menu {
           background-color: var(--color-primary);
