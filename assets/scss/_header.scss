@@ -11,6 +11,7 @@
   @media (max-width: 991px) {
     height: 112px;
     // width: 100vw;
+    pointer-events: auto;
   }
 
   &.header--scroll {
@@ -39,6 +40,7 @@
     pointer-events: auto;
     @media (max-width: 991px) {
       padding: 20px;
+      align-items: flex-start;
     }
   }
 
@@ -76,10 +78,70 @@
     transition: all 0.4s ease;
     transform: translateY(-240px);
     pointer-events: none;
+    @media (max-width: 991px) {
+      position: relative;
+      z-index: 7;
+    }
     &-wrapper {
       display: grid;
       grid-template-columns: 1fr 10fr 1fr;
       height: 72px;
+      @media (max-width: 991px) {
+        padding: 0 24px;
+        grid-template-columns: 1fr 3fr 1fr;
+      }
+      .col-empty {
+        @media (max-width: 991px) {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .header-hamburger {
+          width: 22px;
+          height: 8px;
+          .hamburger {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            &.active {
+              span {
+                &:nth-child(1) {
+                  transform: rotate(45deg);
+                  top: 4px;
+                }
+                &:nth-child(2) {
+                  transform: rotate(-45deg);
+                  bottom: 3px;
+                }
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              inset: -20px;
+              background-color: transparent;
+            }
+            span {
+              display: block;
+              width: 100%;
+              height: 1px;
+              background-color: var(--color-white);
+              transition: all 0.3s ease;
+              position: absolute;
+              transform: rotate(0deg);
+              &:nth-child(1) {
+                top: 0;
+              }
+              &:nth-child(2) {
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
       .col-main {
         width: 100%;
         height: 100%;
@@ -87,6 +149,9 @@
         display: grid;
         grid-template-columns: 1fr 40px 1fr;
         gap: 64px;
+        @media (max-width: 991px) {
+          grid-template-columns: 1fr;
+        }
 
         .logo-scroll {
           display: flex;
@@ -97,14 +162,22 @@
       .col-menu {
         display: flex;
         align-items: center;
+
         &.left {
           display: flex;
           justify-content: flex-end;
+          @media (max-width: 991px) {
+            display: none;
+          }
         }
         &.right {
           display: flex;
           justify-content: flex-start;
+          @media (max-width: 991px) {
+            display: none;
+          }
         }
+
         ul {
           display: flex;
           align-items: center;
@@ -121,6 +194,10 @@
       .col-lang {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        @media (max-width: 991px) {
+          justify-content: flex-end;
+        }
         .dropdown-custom__menu {
           background-color: var(--color-primary);
           left: -10px;
@@ -131,6 +208,7 @@
           align-items: center;
           padding: 0;
           top: 40px;
+          z-index: 5;
         }
         .language__item {
           display: inline-block;
@@ -138,6 +216,48 @@
           font-size: 12px;
           line-height: 20px;
           font-weight: bold;
+        }
+      }
+    }
+  }
+  &-sub-menu {
+    position: fixed;
+    background-color: var(--color-secondary);
+    left: 0;
+    top: 71px;
+    width: 100%;
+    height: calc(100dvh - 71px);
+    z-index: 1;
+    clip-path: inset(0% 0% 100% 0%);
+    transition: clip-path 0.4s ease;
+    will-change: clip-path;
+    &.active {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+    &-container {
+      width: 100%;
+      height: 100%;
+      .sub-menu-container {
+        width: 100%;
+        height: 100%;
+        .sub-menu {
+          width: 100%;
+          height: 100%;
+          padding-top: 120px;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            li {
+              a {
+                &:hover {
+                  color: var(--color-white);
+                }
+              }
+            }
+          }
         }
       }
     }

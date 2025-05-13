@@ -41,6 +41,15 @@ function header() {
       }
     }
   });
+
+  let btnMenu = $(".hamburger");
+  let subMenu = $(".header-sub-menu");
+  let body = $("body");
+  btnMenu.on("click", function () {
+    $(this).toggleClass("active");
+    subMenu.toggleClass("active");
+    body.toggleClass("overflow-hidden");
+  });
 }
 
 function footer() {
