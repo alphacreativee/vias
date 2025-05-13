@@ -1,12 +1,22 @@
 .section-map {
   &__wrapper {
     padding: 0 80px;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
 
   .map {
     margin-top: 64px;
     width: 100%;
     aspect-ratio: 1280 / 640;
+    min-height: 640px;
+
+    @media (max-width: 767px) {
+      margin-top: 40px;
+      height: 440px;
+    }
 
     iframe {
       width: 100%;
