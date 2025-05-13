@@ -382,10 +382,12 @@ function animation() {
       }
     );
   });
+
+  const viewportWidth = window.innerWidth;
+  if (viewportWidth < 991) return;
+
   gsap.utils.toArray(".intro-content").forEach((container) => {
     const box = container.querySelector(".box");
-    const viewportWidth = window.innerWidth;
-    const posOffset = viewportWidth < 991 ? 5 : 10;
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -399,11 +401,11 @@ function animation() {
     tl.fromTo(
       box,
       {
-        yPercent: `-${posOffset}`,
+        yPercent: -10,
         ease: "none"
       },
       {
-        yPercent: posOffset,
+        yPercent: 10,
         ease: "none"
       }
     );
