@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  @media (max-width: 991px) {
+    padding: 64px 24px;
+    grid-template-columns: 1fr;
+    gap: 64px 0;
+  }
   .col-content {
     h3 {
       margin-bottom: 40px;
