@@ -143,6 +143,7 @@ footer {
 
       @media (max-width: 991px) {
         margin-top: 0;
+        gap: 8px;
       }
 
       .btn-download {
@@ -157,7 +158,7 @@ footer {
         transition: all 0.4s ease;
 
         @media (max-width: 991px) {
-          margin-bottom: 26px;
+          margin-bottom: 8px;
         }
 
         &:hover {
@@ -199,7 +200,7 @@ footer {
         margin-bottom: 112px;
 
         @media (max-width: 767px) {
-          margin-bottom: 40px;
+          margin-bottom: 24px;
         }
 
         .title-social {
@@ -225,6 +226,7 @@ footer {
 
         input {
           border: none;
+          border-radius: unset;
           border-bottom: 1px solid var(--color-white);
           color: var(--color-white);
           font-size: 12px;
@@ -291,7 +293,7 @@ footer {
 
   .copyright {
     @media (max-width: 991px) {
-      margin-bottom: 24px;
+      margin-bottom: 8px;
     }
   }
 
