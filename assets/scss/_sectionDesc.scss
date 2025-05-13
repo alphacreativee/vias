@@ -5,6 +5,10 @@
       font-size: 36px;
       line-height: 44px;
       font-style: normal;
+      @media (max-width: 991px) {
+        font-size: 28px;
+        line-height: 40px;
+      }
     }
   }
   @media (max-width: 676px) {
