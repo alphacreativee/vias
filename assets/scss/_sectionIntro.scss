@@ -8,7 +8,7 @@
       }
 
       @media (max-width: 767px) {
-        padding: 0 16px;
+        padding: 0;
       }
 
       &.img-right {
@@ -28,6 +28,7 @@
 
           @media (max-width: 767px) {
             padding: 24px;
+            padding-top: 48px;
           }
         }
 
@@ -38,12 +39,23 @@
             transform: none;
           }
         }
+
+        .intro-content {
+          @media (max-width: 767px) {
+            padding-left: 48px;
+            padding-right: 0;
+          }
+        }
       }
     }
 
     &-image {
       position: relative;
       z-index: 2;
+      @media (max-width: 767px) {
+        padding: 0 24px;
+      }
+
       .img-wrapper {
         width: calc(100% + 45px);
         aspect-ratio: 869 / 501;
@@ -100,7 +112,12 @@
         left: 50%;
         transform: translate(-50%, -48px);
         position: relative;
-        z-index: 3;
+        // z-index: 3;
+      }
+
+      @media (max-width: 767px) {
+        padding: 0;
+        padding-right: 48px;
       }
 
       .working-hours {
@@ -117,6 +134,7 @@
 
         @media (max-width: 767px) {
           padding: 24px;
+          padding-top: 48px;
         }
 
         .title {

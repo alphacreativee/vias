@@ -10,12 +10,26 @@
     }
 
     @media (max-width: 767px) {
-      padding: 88px 16px 0;
+      padding: 130px 24px 0;
     }
 
     .list-item {
       @media (max-width: 991px) {
-        padding-bottom: 62px;
+        padding-bottom: 100px;
+      }
+    }
+
+    .swiper-pagination {
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: unset;
+      left: 50%;
+      bottom: 60px;
+      transform: translateX(-50%);
+
+      .swiper-pagination-progressbar-fill {
+        background-color: var(--color-secondary);
       }
     }
 
