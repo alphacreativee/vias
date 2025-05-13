@@ -78,6 +78,10 @@
     transition: all 0.4s ease;
     transform: translateY(-240px);
     pointer-events: none;
+    @media (max-width: 991px) {
+      position: relative;
+      z-index: 7;
+    }
     &-wrapper {
       display: grid;
       grid-template-columns: 1fr 10fr 1fr;
