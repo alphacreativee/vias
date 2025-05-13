@@ -2,6 +2,9 @@
   width: 100%;
   height: calc(100vh - 72px);
   position: relative;
+  &.spacing-top-mobile {
+    margin-top: 64px;
+  }
   @media (max-width: 991px) {
     height: auto;
     aspect-ratio: 327 / 227;
