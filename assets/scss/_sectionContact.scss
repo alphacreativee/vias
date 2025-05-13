@@ -7,6 +7,10 @@
   .contact-wrapper {
     max-width: 410px;
     margin: 0 auto;
+    @media (max-width: 767px) {
+      max-width: 100%;
+      width: calc(100% - 48px);
+    }
   }
 
   .title {
@@ -17,7 +21,9 @@
   .form {
     padding: 48px;
     background-color: var(--color-white);
-
+    @media (max-width: 991px) {
+      padding: 24px;
+    }
     .field {
       &:not(:first-child) {
         margin-top: 24px;

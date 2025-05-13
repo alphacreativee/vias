@@ -1,4 +1,7 @@
 .section-faq {
+  @media (max-width: 991px) {
+    padding: 0 24px;
+  }
   .content-top {
     .desc {
       margin-top: 24px;
@@ -7,6 +10,9 @@
 
   .content-bottom {
     margin-top: 80px;
+    @media (max-width: 991px) {
+      margin-top: 40px;
+    }
     .accordion-item {
       background-color: transparent;
       border: none;
@@ -30,7 +36,9 @@
       box-shadow: none;
       padding: 24px;
       border-radius: unset;
-
+      @media (max-width: 991px) {
+        padding: 16px;
+      }
       &::after {
         width: 24px;
         height: 24px;
