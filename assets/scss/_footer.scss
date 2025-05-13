@@ -10,7 +10,7 @@ footer {
     z-index: 2;
 
     @media (max-width: 991px) {
-      padding: 32px 16px 24px;
+      padding: 40px 16px 24px;
     }
   }
 
@@ -37,6 +37,11 @@ footer {
       left: 50%;
       transform: translateX(-50%);
 
+      @media (max-width: 767px) {
+        position: unset;
+        transform: none;
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -53,13 +58,14 @@ footer {
         gap: 8px;
         align-items: center;
         justify-content: center;
+        margin-bottom: 40px;
       }
 
       p,
       a {
         color: var(--color-white);
         font-size: 20px;
-        line-height: 36px;
+        line-height: 26px;
         font-family: var(--font-heading);
         font-weight: 300;
       }
@@ -74,7 +80,7 @@ footer {
 
       @media (max-width: 991px) {
         justify-content: center;
-        margin-top: 64px;
+        margin-top: 16px;
       }
 
       a {
@@ -136,7 +142,7 @@ footer {
       gap: 24px;
 
       @media (max-width: 991px) {
-        margin-top: 64px;
+        margin-top: 0;
       }
 
       .btn-download {
@@ -149,6 +155,10 @@ footer {
         color: var(--color-secondary);
         font-weight: 900;
         transition: all 0.4s ease;
+
+        @media (max-width: 991px) {
+          margin-bottom: 26px;
+        }
 
         &:hover {
           color: var(--color-white);
@@ -187,12 +197,30 @@ footer {
         min-width: 235px;
         margin-top: 40px;
         margin-bottom: 112px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 40px;
+        }
+
+        .title-social {
+          @media (max-width: 991px) {
+            text-align: center;
+          }
+        }
       }
 
       .newsletter {
         min-width: 235px;
+
+        @media (max-width: 991px) {
+          min-width: 265px;
+        }
         h4 {
           margin-bottom: 24px;
+
+          @media (max-width: 991px) {
+            text-align: center;
+          }
         }
 
         input {
@@ -241,10 +269,10 @@ footer {
       height: 100%;
 
       @media (max-width: 991px) {
-        width: 90%;
+        width: 130%;
         height: 65%;
         top: unset;
-        bottom: 0;
+        bottom: -50px;
       }
 
       img {
@@ -263,7 +291,7 @@ footer {
 
   .copyright {
     @media (max-width: 991px) {
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
   }
 
