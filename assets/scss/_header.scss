@@ -11,6 +11,7 @@
   @media (max-width: 991px) {
     height: 112px;
     // width: 100vw;
+    pointer-events: auto;
   }
 
   &.header--scroll {
@@ -203,6 +204,7 @@
           align-items: center;
           padding: 0;
           top: 40px;
+          z-index: 5;
         }
         .language__item {
           display: inline-block;
@@ -221,7 +223,7 @@
     top: 71px;
     width: 100%;
     height: calc(100dvh - 71px);
-    z-index: 3;
+    z-index: -1;
     clip-path: inset(0% 0% 100% 0%);
     transition: clip-path 0.4s ease;
     will-change: clip-path;
@@ -244,6 +246,13 @@
             justify-content: center;
             flex-direction: column;
             gap: 24px;
+            li {
+              a {
+                &:hover {
+                  color: var(--color-white);
+                }
+              }
+            }
           }
         }
       }
