@@ -125,6 +125,10 @@
   background-position: center;
   transition: all 0.4s ease;
   transform: translateY(-50%);
+  @media (max-width: 991px) {
+    bottom: 20%;
+    top: unset;
+  }
   &:hover {
     border: 1px solid var(--color-white);
     background-color: var(--color-white);
@@ -136,10 +140,18 @@
 }
 .lg-next {
   right: 180px;
+  @media (max-width: 991px) {
+    right: calc(50% - 40px);
+    transform: translateX(50%) translateY(0%);
+  }
 }
 .lg-prev {
   transform: translateY(-50%) scaleX(-1);
   left: 180px;
+  @media (max-width: 991px) {
+    left: calc(50% - 40px);
+    transform: translateX(-50%) translateY(0%) scaleX(-1);
+  }
   &::after {
     content: "";
   }
@@ -147,6 +159,9 @@
 .lg-toolbar {
   top: 100px;
   padding-right: 80px;
+  @media (max-width: 991px) {
+    padding-right: 24px;
+  }
   .lg-close {
     width: 60px;
     height: 60px;
@@ -159,6 +174,7 @@
     background-position: center;
     transition: all 0.4s ease;
     right: 80px;
+
     &:hover {
       background-color: var(--color-white);
       background-image: url("../../images/use/ic-close-brown.svg");
@@ -176,5 +192,8 @@
 }
 .lg-components {
   bottom: 13%;
+  @media (max-width: 991px) {
+    bottom: 30%;
+  }
 }
 // end syle lightgallery
