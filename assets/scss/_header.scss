@@ -218,9 +218,9 @@
     position: fixed;
     background-color: var(--color-secondary);
     left: 0;
-    top: 72px;
+    top: 71px;
     width: 100%;
-    height: calc(100dvh - 72px);
+    height: calc(100dvh - 71px);
     z-index: 3;
     clip-path: inset(0% 0% 100% 0%);
     transition: clip-path 0.4s ease;
