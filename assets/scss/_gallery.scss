@@ -2,9 +2,6 @@
   &-container {
     .nav {
       margin-bottom: 60px;
-      position: sticky;
-      top: 72px;
-      z-index: 2;
 
       background-color: #f4f1ec;
       &-link {
@@ -42,6 +39,11 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+  .filter-desktop {
+    position: sticky;
+    top: 72px;
+    z-index: 2;
   }
   .fitler-mobile {
     position: sticky;
