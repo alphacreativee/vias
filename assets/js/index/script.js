@@ -1,11 +1,18 @@
 import { preloadImages } from "../../libs/utils.js";
 // let lenis;
+let isSafari =
+  navigator.userAgent.indexOf("Safari") > -1 &&
+  navigator.userAgent.indexOf("Chrome") === -1;
+console.log(isSafari);
 
+if (!isSafari) {
+  Splitting();
+}
 const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
   smoothTouch: true,
-  normalizeWheel: true
+  normalizeWheel: true,
 });
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -15,8 +22,6 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing(0);
-
-Splitting();
 
 ("use strict");
 $ = jQuery;
@@ -39,7 +44,7 @@ function header() {
       } else {
         $(".cta-mess").removeClass("hide");
       }
-    }
+    },
   });
 
   let btnMenu = $(".hamburger");
@@ -66,9 +71,9 @@ function footer() {
       scrollTrigger: {
         trigger: ".footer-ovl .data-zoom-in-footer",
         start: "top 90%",
-        scrub: true
+        scrub: true,
         // markers: true
-      }
+      },
     }
   );
 }
@@ -98,7 +103,7 @@ function hero() {
       preloadImages: true,
       parallax: true,
       lazy: {
-        loadPrevNext: true
+        loadPrevNext: true,
       },
       allowTouchMove: false,
       simulateTouch: false,
@@ -113,49 +118,68 @@ function hero() {
             <circle class="circle-origin" cx="14" cy="14" r="13" stroke="white"/>
             </svg>
             </button>`;
-        }
+        },
       },
       navigation: {
         nextEl: ".hero .swiper-button-next",
-        prevEl: ".hero .swiper-button-prev"
+        prevEl: ".hero .swiper-button-prev",
       },
       on: {
         init: function () {
           let $this = this;
           $($this.slides[$this.activeIndex]);
-        }
-      }
+        },
+      },
     });
   });
+  if (!isSafari) {
+    const fxTitle = document.querySelectorAll("[data-splitting][effect-title]");
+    fxTitle.forEach((element) => {
+      const isMobile = window.innerWidth < 768;
+      const disableMobile = element.hasAttribute("data-disable-mobile");
 
-  const fxTitle = document.querySelectorAll("[data-splitting][effect-title]");
-  fxTitle.forEach((element) => {
-    const isMobile = window.innerWidth < 768;
-    const disableMobile = element.hasAttribute("data-disable-mobile");
+      if (isMobile && disableMobile) return;
 
-    if (isMobile && disableMobile) return;
-
-    const chars = element.querySelectorAll(".char");
-    gsap.fromTo(
-      chars,
-      {
-        "will-change": "opacity, transform",
-        opacity: 0,
-        y: 20
-      },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.04,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 60%",
-          end: "bottom 60%"
-          // markers: true,
+      const chars = element.querySelectorAll(".char");
+      gsap.fromTo(
+        chars,
+        {
+          "will-change": "opacity, transform",
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.04,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 60%",
+            end: "bottom 60%",
+            // markers: true,
+          },
         }
-      }
-    );
-  });
+      );
+    });
+  } else {
+    gsap.utils.toArray("[effect-title]").forEach((element) => {
+      gsap.fromTo(
+        element,
+        {
+          "will-change": "opacity, transform",
+          opacity: 0,
+          y: 40,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          delay: 2,
+        }
+      );
+    });
+  }
 }
 
 function discover() {
@@ -170,18 +194,18 @@ function discover() {
     parallax: true,
     navigation: {
       nextEl: ".section-discover .swiper-button-next",
-      prevEl: ".section-discover .swiper-button-prev"
+      prevEl: ".section-discover .swiper-button-prev",
     },
     pagination: {
       el: ".section-discover .swiper-pagination",
-      type: "progressbar"
+      type: "progressbar",
     },
     breakpoints: {
       991: {
         slidesPerView: 2,
-        spaceBetween: 24
-      }
-    }
+        spaceBetween: 24,
+      },
+    },
   });
 
   ScrollTrigger.create({
@@ -190,10 +214,10 @@ function discover() {
     end: "bottom 60%",
     toggleClass: {
       targets: "body, main",
-      className: "discover-active"
+      className: "discover-active",
     },
     // markers: true,
-    scrub: false
+    scrub: false,
   });
 }
 
@@ -209,28 +233,28 @@ function sectionTestimonials() {
     parallax: false,
     navigation: {
       nextEl: ".testimonials-arrow .swiper-button-next",
-      prevEl: ".testimonials-arrow .swiper-button-prev"
+      prevEl: ".testimonials-arrow .swiper-button-prev",
     },
     pagination: {
       el: ".section-testimonials .swiper-pagination",
-      type: "progressbar"
+      type: "progressbar",
     },
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 24
+        spaceBetween: 24,
       },
       767: {
         slidesPerView: 2,
-        spaceBetween: 24
-      }
-    }
+        spaceBetween: 24,
+      },
+    },
   });
 }
 
 function loading() {
   const tl = gsap.timeline({
-    defaults: { duration: 2, ease: "power2.inOut" }
+    defaults: { duration: 2, ease: "power2.inOut" },
   });
 
   tl.fromTo(
@@ -316,7 +340,7 @@ function animation() {
       element,
       {
         opacity: 0,
-        y: 20
+        y: 20,
       },
       {
         opacity: 1,
@@ -326,10 +350,10 @@ function animation() {
         scrollTrigger: {
           trigger: element,
           start: `top ${posOffset}`,
-          end: `bottom ${posOffset}`
+          end: `bottom ${posOffset}`,
           // toggleActions: "play none none reverse"
           // markers: true
-        }
+        },
       }
     );
   });
@@ -338,7 +362,7 @@ function animation() {
     gsap.fromTo(
       element,
       {
-        scale: 1.1
+        scale: 1.1,
       },
       {
         scrollTrigger: {
@@ -347,13 +371,13 @@ function animation() {
           end: "bottom 70%",
           onEnter: () => {
             element.classList.add("done");
-          }
+          },
           // markers: true
         },
         scale: 1,
         duration: 0.5,
         ease: "none",
-        stagger: 0.1
+        stagger: 0.1,
       }
     );
   });
@@ -365,20 +389,20 @@ function animation() {
       scrollTrigger: {
         trigger: container,
         scrub: true,
-        pin: false
+        pin: false,
         // markers: true
-      }
+      },
     });
 
     tl.fromTo(
       img,
       {
         yPercent: -10,
-        ease: "none"
+        ease: "none",
       },
       {
         yPercent: 10,
-        ease: "none"
+        ease: "none",
       }
     );
   });
@@ -393,20 +417,20 @@ function animation() {
       scrollTrigger: {
         trigger: container,
         scrub: true,
-        pin: false
+        pin: false,
         // markers: true,
-      }
+      },
     });
 
     tl.fromTo(
       box,
       {
         yPercent: -10,
-        ease: "none"
+        ease: "none",
       },
       {
         yPercent: 10,
-        ease: "none"
+        ease: "none",
       }
     );
   });
@@ -418,14 +442,14 @@ function sectionImage() {
   gsap.fromTo(
     ".section-image .image-wrapper",
     {
-      clipPath: "inset(0% 0% 0% 0%)"
+      clipPath: "inset(0% 0% 0% 0%)",
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1
+        scrub: 1,
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
@@ -451,25 +475,25 @@ function sectionImage() {
         return `inset(${heightClipPercentage}% ${widthClipPercentage}% ${heightClipPercentage}% ${widthClipPercentage}%)`;
       },
       duration: 0.4,
-      ease: "power2.out"
+      ease: "power2.out",
     }
   );
 
   gsap.fromTo(
     ".section-image .image-wrapper img",
     {
-      scale: 1
+      scale: 1,
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1
+        scrub: 1,
       },
       scale: 1.1,
       duration: 0.4,
-      ease: "power2.out"
+      ease: "power2.out",
     }
   );
 }
@@ -485,7 +509,7 @@ function sliderParallax() {
     keyboardControl: true,
     navigation: {
       nextEl: ".slider-parallax .swiper-button-next",
-      prevEl: ".slider-parallax .swiper-button-prev"
+      prevEl: ".slider-parallax .swiper-button-prev",
     },
     pagination: {
       el: ".slider-parallax-pagination",
@@ -521,8 +545,8 @@ function sliderParallax() {
             slideInner.style.transition = speed + "ms " + easing;
           }
         });
-      }
-    }
+      },
+    },
   });
 }
 function gallery() {
@@ -535,13 +559,13 @@ function gallery() {
       height: "100%",
       width: "100%",
       iframeMaxWidth: "100%",
-      subHtmlSelectorRelative: true,
+      // subHtmlSelectorRelative: true,
       showCloseIcon: true,
       mobileSettings: {
         controls: true,
         showCloseIcon: true,
-        download: false
-      }
+        download: false,
+      },
     });
   });
 }
