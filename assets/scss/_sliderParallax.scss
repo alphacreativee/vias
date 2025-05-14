@@ -3,7 +3,9 @@
   height: calc(100vh - 72px);
   position: relative;
   &.spacing-top-mobile {
-    margin-top: 64px;
+    @media (max-width: 991px) {
+      margin-top: 64px;
+    }
   }
   @media (max-width: 991px) {
     height: auto;
