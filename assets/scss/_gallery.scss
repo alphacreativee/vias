@@ -24,8 +24,11 @@
     gap: 24px;
     @media (max-width: 991px) {
       padding: 0 24px;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       margin-top: 40px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
     }
   }
 

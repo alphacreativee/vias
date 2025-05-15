@@ -4,7 +4,7 @@
       padding: 0 80px;
 
       @media (max-width: 991px) {
-        padding: 0 40px;
+        padding: 0 24px;
       }
 
       @media (max-width: 767px) {
@@ -41,6 +41,12 @@
         }
 
         .intro-content {
+          @media (max-width: 991px) and (min-width: 768px) {
+            transform: translate(24px, -24px);
+            .box {
+              padding-top: 48px;
+            }
+          }
           @media (max-width: 767px) {
             padding-left: 48px;
             padding-right: 0;
@@ -106,7 +112,12 @@
     }
 
     &-content {
-      @media (max-width: 991px) {
+      @media (max-width: 991px) and (min-width: 768px) {
+        position: relative;
+        left: 0;
+        transform: translate(-24px, -24px);
+      }
+      @media (max-width: 767px) {
         padding: 0 24px;
         width: calc(100%);
         left: 50%;
@@ -129,7 +140,8 @@
         background-color: var(--color-white);
 
         @media (max-width: 991px) {
-          padding: 40px;
+          padding: 24px;
+          padding-top: 48px;
         }
 
         @media (max-width: 767px) {
