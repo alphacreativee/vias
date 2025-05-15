@@ -209,6 +209,12 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 64px;
+  @media (max-width: 991px) {
+    padding-bottom: 40%;
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 62.5%;
+  }
 }
 
 // end syle lightgallery
