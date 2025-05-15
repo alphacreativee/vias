@@ -236,6 +236,10 @@ footer {
           line-height: 20px;
           width: 100%;
 
+          &.error {
+            border-color: red;
+          }
+
           &::placeholder {
             color: var(--color-white);
           }
