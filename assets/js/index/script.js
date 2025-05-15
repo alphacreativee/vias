@@ -12,7 +12,7 @@ const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
   smoothTouch: true,
-  normalizeWheel: true,
+  normalizeWheel: true
 });
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -44,7 +44,7 @@ function header() {
       } else {
         $(".cta-mess").removeClass("hide");
       }
-    },
+    }
   });
 
   let btnMenu = $(".hamburger");
@@ -71,9 +71,9 @@ function footer() {
       scrollTrigger: {
         trigger: ".footer-ovl .data-zoom-in-footer",
         start: "top 90%",
-        scrub: true,
+        scrub: true
         // markers: true
-      },
+      }
     }
   );
 }
@@ -103,7 +103,7 @@ function hero() {
       preloadImages: true,
       parallax: true,
       lazy: {
-        loadPrevNext: true,
+        loadPrevNext: true
       },
       allowTouchMove: false,
       simulateTouch: false,
@@ -118,18 +118,18 @@ function hero() {
             <circle class="circle-origin" cx="14" cy="14" r="13" stroke="white"/>
             </svg>
             </button>`;
-        },
+        }
       },
       navigation: {
         nextEl: ".hero .swiper-button-next",
-        prevEl: ".hero .swiper-button-prev",
+        prevEl: ".hero .swiper-button-prev"
       },
       on: {
         init: function () {
           let $this = this;
           $($this.slides[$this.activeIndex]);
-        },
-      },
+        }
+      }
     });
   });
   if (!isSafari) {
@@ -146,7 +146,7 @@ function hero() {
         {
           "will-change": "opacity, transform",
           opacity: 0,
-          y: 20,
+          y: 20
         },
         {
           opacity: 1,
@@ -155,9 +155,9 @@ function hero() {
           scrollTrigger: {
             trigger: element,
             start: "top 60%",
-            end: "bottom 60%",
+            end: "bottom 60%"
             // markers: true,
-          },
+          }
         }
       );
     });
@@ -168,14 +168,14 @@ function hero() {
         {
           "will-change": "opacity, transform",
           opacity: 0,
-          y: 40,
+          y: 40
         },
         {
           opacity: 1,
           y: 0,
           duration: 1,
           ease: "power2.out",
-          delay: 2,
+          delay: 2
         }
       );
     });
@@ -194,18 +194,18 @@ function discover() {
     parallax: true,
     navigation: {
       nextEl: ".section-discover .swiper-button-next",
-      prevEl: ".section-discover .swiper-button-prev",
+      prevEl: ".section-discover .swiper-button-prev"
     },
     pagination: {
       el: ".section-discover .swiper-pagination",
-      type: "progressbar",
+      type: "progressbar"
     },
     breakpoints: {
       991: {
         slidesPerView: 2,
-        spaceBetween: 24,
-      },
-    },
+        spaceBetween: 24
+      }
+    }
   });
 
   ScrollTrigger.create({
@@ -214,10 +214,10 @@ function discover() {
     end: "bottom 60%",
     toggleClass: {
       targets: "body, main",
-      className: "discover-active",
+      className: "discover-active"
     },
     // markers: true,
-    scrub: false,
+    scrub: false
   });
 }
 
@@ -233,28 +233,28 @@ function sectionTestimonials() {
     parallax: false,
     navigation: {
       nextEl: ".testimonials-arrow .swiper-button-next",
-      prevEl: ".testimonials-arrow .swiper-button-prev",
+      prevEl: ".testimonials-arrow .swiper-button-prev"
     },
     pagination: {
       el: ".section-testimonials .swiper-pagination",
-      type: "progressbar",
+      type: "progressbar"
     },
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 24,
+        spaceBetween: 24
       },
       767: {
         slidesPerView: 2,
-        spaceBetween: 24,
-      },
-    },
+        spaceBetween: 24
+      }
+    }
   });
 }
 
 function loading() {
   const tl = gsap.timeline({
-    defaults: { duration: 2, ease: "power2.inOut" },
+    defaults: { duration: 2, ease: "power2.inOut" }
   });
 
   tl.fromTo(
@@ -340,7 +340,7 @@ function animation() {
       element,
       {
         opacity: 0,
-        y: 20,
+        y: 20
       },
       {
         opacity: 1,
@@ -350,10 +350,10 @@ function animation() {
         scrollTrigger: {
           trigger: element,
           start: `top ${posOffset}`,
-          end: `bottom ${posOffset}`,
+          end: `bottom ${posOffset}`
           // toggleActions: "play none none reverse"
           // markers: true
-        },
+        }
       }
     );
   });
@@ -362,7 +362,7 @@ function animation() {
     gsap.fromTo(
       element,
       {
-        scale: 1.1,
+        scale: 1.1
       },
       {
         scrollTrigger: {
@@ -371,13 +371,13 @@ function animation() {
           end: "bottom 70%",
           onEnter: () => {
             element.classList.add("done");
-          },
+          }
           // markers: true
         },
         scale: 1,
         duration: 0.5,
         ease: "none",
-        stagger: 0.1,
+        stagger: 0.1
       }
     );
   });
@@ -389,20 +389,20 @@ function animation() {
       scrollTrigger: {
         trigger: container,
         scrub: true,
-        pin: false,
+        pin: false
         // markers: true
-      },
+      }
     });
 
     tl.fromTo(
       img,
       {
         yPercent: -10,
-        ease: "none",
+        ease: "none"
       },
       {
         yPercent: 10,
-        ease: "none",
+        ease: "none"
       }
     );
   });
@@ -417,20 +417,20 @@ function animation() {
       scrollTrigger: {
         trigger: container,
         scrub: true,
-        pin: false,
+        pin: false
         // markers: true,
-      },
+      }
     });
 
     tl.fromTo(
       box,
       {
         yPercent: -10,
-        ease: "none",
+        ease: "none"
       },
       {
         yPercent: 10,
-        ease: "none",
+        ease: "none"
       }
     );
   });
@@ -442,14 +442,14 @@ function sectionImage() {
   gsap.fromTo(
     ".section-image .image-wrapper",
     {
-      clipPath: "inset(0% 0% 0% 0%)",
+      clipPath: "inset(0% 0% 0% 0%)"
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1,
+        scrub: 1
       },
       clipPath: () => {
         const viewportWidth = window.innerWidth;
@@ -475,25 +475,25 @@ function sectionImage() {
         return `inset(${heightClipPercentage}% ${widthClipPercentage}% ${heightClipPercentage}% ${widthClipPercentage}%)`;
       },
       duration: 0.4,
-      ease: "power2.out",
+      ease: "power2.out"
     }
   );
 
   gsap.fromTo(
     ".section-image .image-wrapper img",
     {
-      scale: 1,
+      scale: 1
     },
     {
       scrollTrigger: {
         trigger: ".section-image",
         start: "top 70%",
         end: "bottom 70%",
-        scrub: 1,
+        scrub: 1
       },
       scale: 1.1,
       duration: 0.4,
-      ease: "power2.out",
+      ease: "power2.out"
     }
   );
 }
@@ -509,11 +509,11 @@ function sliderParallax() {
     keyboardControl: true,
     navigation: {
       nextEl: ".slider-parallax .swiper-button-next",
-      prevEl: ".slider-parallax .swiper-button-prev",
+      prevEl: ".slider-parallax .swiper-button-prev"
     },
     pagination: {
       el: ".slider-parallax-pagination",
-      type: "progressbar",
+      type: "progressbar"
     },
     on: {
       progress: function (swiper) {
@@ -545,8 +545,8 @@ function sliderParallax() {
             slideInner.style.transition = speed + "ms " + easing;
           }
         });
-      },
-    },
+      }
+    }
   });
 }
 function gallery() {
@@ -564,8 +564,8 @@ function gallery() {
       mobileSettings: {
         controls: true,
         showCloseIcon: true,
-        download: false,
-      },
+        download: false
+      }
     });
   });
 }
@@ -603,6 +603,124 @@ function filterGalleryMobile() {
   });
 }
 
+function contactForm() {
+  if ($(".contact-form").length < 1) return;
+
+  const contactForm = $("#contact-form");
+  const nameField = contactForm.find("input[name='name']");
+  const emailField = contactForm.find("input[name='email']");
+  const phoneField = contactForm.find("input[name='phone']");
+  const messageField = contactForm.find("textarea[name='message']");
+  const submitButton = contactForm.find("button[type='submit']");
+
+  contactForm.on("submit", function (e) {
+    e.preventDefault();
+
+    // contactForm.find(".error-message").remove();
+    contactForm.find("input, textarea").removeClass("error");
+
+    let isValid = true;
+
+    if (!nameField.val().trim()) {
+      nameField.addClass("error");
+      isValid = false;
+    }
+
+    if (!emailField.val().trim()) {
+      emailField.addClass("error");
+      isValid = false;
+    }
+
+    if (!phoneField.val().trim()) {
+      phoneField.addClass("error");
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    $.ajax({
+      type: "POST",
+      url: ajaxUrl,
+      data: {
+        action: "submit_contact_form",
+        name: nameField.val().trim(),
+        email: emailField.val().trim(),
+        phone: phoneField.val().trim(),
+        messageNote: messageField.val().trim()
+      },
+      beforeSend: function () {
+        // $(".contact-message").remove();
+      },
+      success: function (res) {
+        // $(".contact-message").remove();
+        contactForm[0].reset();
+        contactForm.find(".noti-success").removeClass("d-none");
+
+        setTimeout(() => {
+          contactForm.find(".noti-success").addClass("d-none");
+        }, 5000);
+      },
+      error: function (xhr, status, error) {
+        console.error("Lỗi khi gửi form:", error);
+        $(".contact-message").remove();
+        contactForm.append(
+          '<span class="contact-message" style="color: red;">Có lỗi xảy ra, vui lòng thử lại sau.</span>'
+        );
+      }
+    });
+  });
+}
+
+function getNewletter() {
+  $("#form-newletter").on("submit", function (e) {
+    e.preventDefault();
+
+    const thisForm = $(this);
+    const emailField = thisForm.find("input[type='email']");
+
+    emailField.removeClass("error");
+    thisForm.siblings("span").remove();
+
+    if (!emailField.length) {
+      console.error("Không tìm thấy input email trong form.");
+      return;
+    }
+
+    const email = emailField.val() ? emailField.val().trim() : "";
+
+    if (!email) {
+      emailField.addClass("error");
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: ajaxUrl,
+      data: {
+        action: "vias_receive_newletter",
+        email: email
+      },
+      beforeSend: function () {
+        console.log("Đang gửi dữ liệu...");
+      },
+      success: function (res) {
+        thisForm[0].reset();
+        thisForm.after(
+          '<span class="contact-message b1-font" style="color: green;">Submit successfull!</span>'
+        );
+
+        setTimeout(() => {
+          thisForm.siblings(".contact-message").remove();
+        }, 5000);
+      },
+      error: function (xhr, status, error) {
+        console.error("Lỗi khi gửi form:", error);
+        alert("Có lỗi xảy ra, vui lòng thử lại sau.");
+      }
+    });
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
@@ -619,6 +737,8 @@ const init = () => {
   sectionTestimonials();
   gallery();
   filterGalleryMobile();
+  contactForm();
+  getNewletter();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
