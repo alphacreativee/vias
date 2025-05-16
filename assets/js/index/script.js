@@ -413,7 +413,7 @@ function animation() {
   });
 
   const viewportWidth = window.innerWidth;
-  if (viewportWidth < 991) return;
+  if (viewportWidth < 1024) return;
 
   gsap.utils.toArray(".intro-content").forEach((container) => {
     const box = container.querySelector(".box");
