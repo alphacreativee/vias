@@ -197,6 +197,10 @@
 .lg-image {
   max-width: 840px !important;
   max-height: 540px !important;
+  @media (max-width: 991px) {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
 }
 .lg-counter {
   display: none;
