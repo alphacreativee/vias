@@ -53,6 +53,12 @@
           background-color: var(--color-secondary);
         }
       }
+
+      p {
+        &:not(:last-child) {
+          margin-top: 24px;
+        }
+      }
     }
     .list-button {
       display: flex;

@@ -3,6 +3,17 @@
   background-image: var(--bg-contact);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
 
   .contact-wrapper {
     max-width: 410px;

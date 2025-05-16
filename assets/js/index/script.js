@@ -229,7 +229,6 @@ function sectionTestimonials() {
     loop: false,
     speed: 1000,
     spaceBetween: 24,
-    loopAdditionalSlides: 8,
     parallax: false,
     navigation: {
       nextEl: ".testimonials-arrow .swiper-button-next",
@@ -710,12 +709,14 @@ function getNewletter() {
       },
       success: function (res) {
         thisForm[0].reset();
+        thisForm.addClass("d-none");
         thisForm.after(
-          '<span class="contact-message b1-font" style="color: green;">Submit successfull!</span>'
+          '<span class="contact-message b3-font d-block" style="color: green; max-width: 235px; margin-top: 16px;">We have received your information, thank you for registering.</span>'
         );
 
         setTimeout(() => {
           thisForm.siblings(".contact-message").remove();
+          thisForm.removeClass("d-none");
         }, 5000);
       },
       error: function (xhr, status, error) {
