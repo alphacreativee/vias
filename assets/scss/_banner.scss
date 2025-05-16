@@ -74,6 +74,8 @@
 
     @media (max-width: 991px) {
       width: 85%;
+      top: unset;
+      bottom: 0;
     }
 
     h2 {

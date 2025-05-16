@@ -10,8 +10,10 @@ if (!isSafari) {
 const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
-  smoothTouch: false,
-  normalizeWheel: true
+  smoothTouch: true,
+  normalizeWheel: true,
+  gestureOrientation: "vertical",
+  touchMultiplier: 1.5
 });
 
 lenis.on("scroll", ScrollTrigger.update);
