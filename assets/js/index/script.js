@@ -252,6 +252,7 @@ function sectionTestimonials() {
 }
 
 function loading() {
+  if ($(".loading").length < 1) return;
   const tl = gsap.timeline({
     defaults: { duration: 2, ease: "power2.inOut" },
   });
