@@ -712,7 +712,7 @@ function getNewletter() {
         thisForm[0].reset();
         thisForm.addClass("d-none");
         thisForm.after(
-          '<span class="contact-message b3-font d-block" style="color: white; max-width: 235px; margin-top: 16px;">We have received your information, thank you for registering.</span>'
+          '<span class="contact-message b3-font d-block color-white" style=" max-width: 235px; margin-top: 16px;">We have received your information, thank you for registering.</span>'
         );
 
         setTimeout(() => {
