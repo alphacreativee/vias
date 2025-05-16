@@ -3,7 +3,6 @@ import { preloadImages } from "../../libs/utils.js";
 let isSafari =
   navigator.userAgent.indexOf("Safari") > -1 &&
   navigator.userAgent.indexOf("Chrome") === -1;
-console.log(isSafari);
 
 if (!isSafari) {
   Splitting();
@@ -11,7 +10,7 @@ if (!isSafari) {
 const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
-  smoothTouch: true,
+  smoothTouch: false,
   normalizeWheel: true
 });
 
