@@ -1,4 +1,8 @@
 .section-testimonials {
+  @media (max-width: 991px) {
+    margin-top: 10px;
+  }
+
   .testimonials-wapper {
     padding: 0 80px;
 
@@ -20,6 +24,10 @@
 
   .testimonials-slider {
     margin-top: 48px;
+
+    @media (max-width: 991px) {
+      margin-top: 40px;
+    }
 
     .item {
       &-wrapper {

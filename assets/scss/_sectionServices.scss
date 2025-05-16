@@ -14,6 +14,10 @@
       display: block;
       width: max-content;
       margin: 48px auto 0;
+
+      @media (max-width: 991px) {
+        margin: 27px auto 0;
+      }
     }
   }
 
