@@ -21,6 +21,12 @@
       row-gap: 130px;
     }
 
+    &.home {
+      @media (max-width: 991px) {
+        row-gap: 56px;
+      }
+    }
+
     a.link-hover {
       display: block;
       max-width: max-content;
