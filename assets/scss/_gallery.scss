@@ -185,9 +185,9 @@
     right: 80px;
 
     &:hover {
-      border: 1px solid var(--color-white);
-      background-color: var(--color-white);
-      background-image: url("../../images/use/ic-close-brown.svg");
+      border: 1px solid var(--color-primary);
+      background-color: transparent;
+      background-image: url("../../images/use/ic-close-gold.svg");
     }
     &::after {
       content: "";
