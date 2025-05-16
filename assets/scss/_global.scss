@@ -135,8 +135,7 @@ main {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 11;
-    left: 10px;
-    width: 100%;
+    right: 0;
     background-color: transparent;
     padding: 8px;
     background-color: var(--color-secondary);
@@ -151,7 +150,7 @@ main {
       display: inline-block;
       width: 100%;
       padding: 0;
-      white-space: nowrap;
+
       cursor: pointer;
       transition: all 0.3s;
       border-radius: 8px;
@@ -160,6 +159,11 @@ main {
       line-height: 22px;
       font-weight: 400;
       text-align: center;
+      span {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+      }
       &:hover {
         // color: var(--color-secondary) !important;
       }
