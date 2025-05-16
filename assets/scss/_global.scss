@@ -317,6 +317,7 @@ main {
   left: 0;
   z-index: 1000;
   will-change: clip-path;
+  pointer-events: none;
   .image {
     width: 100%;
     height: 100%;
