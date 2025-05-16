@@ -22,6 +22,10 @@
 
       &:not(:last-child) {
         margin-bottom: 32px;
+
+        @media (max-width: 991px) {
+          margin-bottom: 16px;
+        }
       }
 
       &:has(.accordion-button[aria-expanded="true"]) {
@@ -77,6 +81,11 @@
         top: 0;
         left: 24px;
         background-color: rgba($color: #543929, $alpha: 0.3);
+
+        @media (max-width: 991px) {
+          width: calc(100% - 32px);
+          left: 16px;
+        }
       }
     }
   }
