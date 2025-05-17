@@ -39,6 +39,17 @@ main {
     height: 64px;
   }
 }
+.spacing-160 {
+  height: 160px;
+
+  @media (max-width: 991px) {
+    height: 64px;
+
+    &.spacing-mb-24 {
+      height: 24px;
+    }
+  }
+}
 
 .spacing-140 {
   height: 140px;

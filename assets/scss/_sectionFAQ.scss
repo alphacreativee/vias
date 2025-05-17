@@ -39,7 +39,7 @@
       gap: 24px;
       color: var(--color-secondary);
       box-shadow: none;
-      padding: 24px;
+      padding: 32px;
       border-radius: unset;
       @media (max-width: 991px) {
         padding: 16px;
@@ -57,7 +57,7 @@
     }
 
     .accordion-body {
-      padding: 24px;
+      padding: 32px;
       position: relative;
       font-size: 16px;
       line-height: 24px;
@@ -76,11 +76,11 @@
 
       &::before {
         content: "";
-        width: calc(100% - 48px);
+        width: calc(100% - 64px);
         height: 1px;
         position: absolute;
         top: 0;
-        left: 24px;
+        left: 32px;
         background-color: rgba($color: #543929, $alpha: 0.3);
 
         @media (max-width: 991px) {
