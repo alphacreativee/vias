@@ -18,17 +18,19 @@
     ul {
       padding-left: 20px;
       li {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: -12px;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: var(--color-secondary);
+        }
         p {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: -10px;
-            width: 2px;
-            height: 2px;
-            background-color: var(--color-secondary);
-          }
+          color: var(--color-secondary);
         }
       }
     }
