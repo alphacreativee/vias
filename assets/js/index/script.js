@@ -34,23 +34,77 @@ function header() {
     onUpdate: (self) => {
       const scrollY = self.scroll();
 
+      // Header scroll effect
       if (scrollY >= 100) {
         $("header").addClass("header--scroll");
       } else {
         $("header").removeClass("header--scroll");
       }
 
-      if (self.direction === 1) {
-        $(".cta-mess").addClass("hide");
+      // Check if cta-mess touches footer
+      checkCtaMessFooterCollision();
+
+      // Original commented code for scroll direction
+      // if (self.direction === 1) {
+      //   $(".cta-mess").addClass("hide");
+      // } else {
+      //   $(".cta-mess").removeClass("hide");
+      // }
+    },
+  });
+  $(".back-top").on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
+  });
+
+  // Function to check collision between cta-mess and footer
+  function checkCtaMessFooterCollision() {
+    const ctaMess = $(".cta-mess");
+    const footer = $("footer"); // hoặc selector footer của bạn
+
+    if (ctaMess.length && footer.length) {
+      const ctaMessRect = ctaMess[0].getBoundingClientRect();
+      const footerRect = footer[0].getBoundingClientRect();
+
+      // Check if cta-mess bottom touches or overlaps footer top
+      const isColliding = ctaMessRect.bottom >= footerRect.top;
+
+      if (isColliding) {
+        ctaMess.addClass("touching-footer");
+        // Có thể thêm logic khác khi chạm footer
+        console.log("CTA Mess is touching footer!");
       } else {
-        $(".cta-mess").removeClass("hide");
+        ctaMess.removeClass("touching-footer");
       }
+    }
+  }
+
+  // Alternative: Sử dụng ScrollTrigger riêng cho footer detection
+  ScrollTrigger.create({
+    trigger: "footer", // hoặc selector footer của bạn
+    start: "top bottom", // khi top của footer chạm bottom của viewport
+    end: "bottom top", // khi bottom của footer chạm top của viewport
+    onEnter: () => {
+      $(".cta-mess").addClass("near-footer");
+      console.log("CTA Mess entered footer area");
+    },
+    onLeave: () => {
+      $(".cta-mess").removeClass("near-footer");
+      console.log("CTA Mess left footer area");
+    },
+    onEnterBack: () => {
+      $(".cta-mess").addClass("near-footer");
+    },
+    onLeaveBack: () => {
+      $(".cta-mess").removeClass("near-footer");
     },
   });
 
+  // Menu functionality
   let btnMenu = $(".hamburger");
   let subMenu = $(".header-sub-menu");
   let body = $("body");
+
   btnMenu.on("click", function () {
     $(this).toggleClass("active");
     subMenu.toggleClass("active");

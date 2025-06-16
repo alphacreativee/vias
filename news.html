@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin tức</title>
+    <!-- import favicon -->
+    <link
+      rel="icon"
+      href="./assets/images/use/favicon-dark.ico"
+      type="image/x-icon"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="./assets/images/use/favicon-light.ico"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- meta -->
+
+    <!-- font -->
+    <link rel="stylesheet" href="./assets/fonts/MabryPro/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/fonts/SuperDisplay/stylesheet.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/PhotographFont/stylesheet.css"
+    />
+    <!-- end font -->
+
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/splitting.min.css" />
+    <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end meta -->
+    <!-- link custom css page -->
+    <link rel="stylesheet" href="./assets/main/css/style.min.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- layout -->
+    <header class="header">
+      <div class="container-fluid p-0">
+        <div class="header-wrapper">
+          <div class="header-menu"></div>
+          <a href="./index.html" class="header-logo d-block">
+            <img src="./assets/images/logo-footer.svg" alt="" />
+          </a>
+          <div class="header-language dropdown-custom">
+            <div class="language__head dropdown-custom__btn">
+              <div class="ic">
+                <svg
+                  width="13"
+                  height="8"
+                  viewBox="0 0 13 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.5C2.86665 1.19999 6.59996 3.57998 6.59996 7.5"
+                    stroke="white"
+                  />
+                  <path
+                    d="M12.1996 0.500059C10.3329 1.20005 6.59961 3.58004 6.59961 7.5"
+                    stroke="white"
+                  />
+                </svg>
+              </div>
+              <div class="value-select color-white dropdown-custom__text">
+                <span>EN</span>
+              </div>
+            </div>
+            <div class="language__body dropdown-custom__menu">
+              <a href="#" class="dropdown-custom__item language__item">
+                <span class="d-inline-block link-hover">VI</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header-scroll">
+          <div class="header-scroll-wrapper">
+            <div class="col-empty">
+              <div class="header-hamburger d-flex d-lg-none">
+                <div class="hamburger">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-main">
+              <div class="col-menu left">
+                <ul>
+                  <li>
+                    <a
+                      href="./accommodation.html"
+                      class="b2-font color-white text-uppercase link-hover"
+                      >BUILDING & SUITES</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./restaurant.html"
+                      class="b2-font color-white text-uppercase link-hover active"
+                      >Dining</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./offer.html"
+                      class="b2-font color-white text-uppercase link-hover"
+                      >Offers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./facility.html"
+                      class="b2-font color-white text-uppercase link-hover"
+                      >Facilities</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <a href="./index.html" class="logo-scroll">
+                <img src="./assets/images/logo.svg" alt="" />
+              </a>
+              <div class="col-menu right">
+                <ul>
+                  <li>
+                    <a
+                      href="./service.html"
+                      class="b2-font color-white text-uppercase link-hover active"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./event.html"
+                      class="b2-font color-white text-uppercase link-hover active"
+                      >Meeting & event</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./gallery.html"
+                      class="b2-font color-white text-uppercase link-hover"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./contact.html"
+                      class="b2-font color-white text-uppercase link-hover"
+                      >contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lang">
+              <div class="header-language dropdown-custom">
+                <div class="language__head dropdown-custom__btn">
+                  <div
+                    class="value-select color-white dropdown-custom__text b2-font text-uppercase"
+                  >
+                    <span>En</span>
+                  </div>
+                  <div class="ic">
+                    <svg
+                      width="13"
+                      height="8"
+                      viewBox="0 0 13 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 0.5C2.86665 1.19999 6.59996 3.57998 6.59996 7.5"
+                        stroke="white"
+                      />
+                      <path
+                        d="M12.1996 0.500059C10.3329 1.20005 6.59961 3.58004 6.59961 7.5"
+                        stroke="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="language__body dropdown-custom__menu">
+                  <a
+                    href="#"
+                    class="dropdown-custom__item language__item b2-font text-uppercase"
+                  >
+                    <span class="b2-font text-uppercase">VI</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-sub-menu">
+        <div class="header-sub-menu-container">
+          <div class="sub-menu-container">
+            <div class="sub-menu">
+              <ul>
+                <li>
+                  <a
+                    href="./accommodation.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Building & suites</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./dining.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Dining</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./facility.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./offer.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./service.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./event.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Meeting & event</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./gallery.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="font-heading h5-font color-white font-italic font-light link-hover"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero position-relative text-white">
+        <div class="hero-image">
+          <img src="./assets/images/banner-gallery.png" alt="" />
+        </div>
+      </section>
+
+      <div class="spacing-120"></div>
+      <section class="section-desc">
+        <div class="container-fluid p-0">
+          <div class="row g-0 justify-content-center">
+            <div class="col-lg-10">
+              <div class="desc data-fade-in">
+                At Vias Van Phong, every smile, every sunset, and every shared
+                laugh becomes a treasured memory. Whether it’s a family
+                vacation, a romantic escape, or a joyful gathering with friends,
+                our resort is where moments turn into stories. Let our stunning
+                views and heartfelt hospitality be the backdrop to the memories
+                you’ll carry forever.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="spacing-120"></div>
+      <section class="news-list">
+        <div class="news-list__container">
+          <div class="news-item d-block">
+            <a href="" class="news-img d-block">
+              <img src="./assets/images/gallery-1.png" alt="" />
+            </a>
+            <div class="news-content">
+              <h3 class="h5-font font-heading color-secondary font-light">
+                Vias Resort Van Phong Peninsula honored with tripadvisor
+                Travelers
+              </h3>
+              <div>
+                <a href="#" class="b1-font link-hover color-secondary"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="news-item d-block">
+            <a href="" class="news-img d-block">
+              <img src="./assets/images/gallery-1.png" alt="" />
+            </a>
+            <div class="news-content">
+              <h3 class="h5-font font-heading color-secondary font-light">
+                Vias Resort Van Phong Peninsula honored with tripadvisor
+                Travelers
+              </h3>
+              <div>
+                <a href="#" class="b1-font link-hover color-secondary"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="news-item d-block">
+            <a href="" class="news-img d-block">
+              <img src="./assets/images/gallery-1.png" alt="" />
+            </a>
+            <div class="news-content">
+              <h3 class="h5-font font-heading color-secondary font-light">
+                Vias Resort Van Phong Peninsula honored with tripadvisor
+                Travelers
+              </h3>
+              <div>
+                <a href="#" class="b1-font link-hover color-secondary"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="news-item d-block">
+            <a href="" class="news-img d-block">
+              <img src="./assets/images/gallery-1.png" alt="" />
+            </a>
+            <div class="news-content">
+              <h3 class="h5-font font-heading color-secondary font-light">
+                Vias Resort Van Phong Peninsula honored with tripadvisor
+                Travelers
+              </h3>
+              <div>
+                <a href="#" class="b1-font link-hover color-secondary"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="news-item d-block">
+            <a href="" class="news-img d-block">
+              <img src="./assets/images/gallery-1.png" alt="" />
+            </a>
+            <div class="news-content">
+              <h3 class="h5-font font-heading color-secondary font-light">
+                Vias Resort Van Phong Peninsula honored with tripadvisor
+                Travelers
+              </h3>
+              <div>
+                <a href="#" class="b1-font link-hover color-secondary"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacing-120"></div>
+    </main>
+    <div class="cta-mess">
+      <div class="group-mess">
+        <a href="#" class="messenger">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_1751_1478"
+              style="mask-type: luminance"
+              maskUnits="userSpaceOnUse"
+              x="1"
+              y="1"
+              width="22"
+              height="22"
+            >
+              <path
+                d="M22 12C22 17.523 17.523 22 12 22H2V12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12Z"
+                fill="white"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 9H16M7 13H16M7 17H12"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </mask>
+            <g mask="url(#mask0_1751_1478)">
+              <path d="M0 0H24V24H0V0Z" fill="white" />
+            </g>
+          </svg>
+        </a>
+        <div class="group-list-mess">
+          <a href="" class="mess-item d-flex">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.8525 4.90723C19.8175 4.90723 20.6919 4.95383 21.2988 4.99902V7.07227H19.8965C18.875 7.07227 18.0143 7.31097 17.4541 7.9707C16.9216 8.59787 16.8428 9.4049 16.8428 10.0566V13.6914H21.0225L20.6924 16.1455H16.8428V27.0928H14.1572V16.1455H10.4072V13.6914H14.1572V9.63965C14.1573 8.00874 14.6621 6.85316 15.4365 6.10352C16.2161 5.34903 17.3705 4.90731 18.8525 4.90723Z"
+                fill="white"
+                stroke="white"
+                stroke-width="1.81491"
+              />
+            </svg>
+          </a>
+          <a href="" class="mess-item d-flex">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2110_5065)">
+                <path
+                  d="M11.2809 27.7508C9.85705 27.7508 8.42798 27.7977 7.00413 27.7456C5.3195 27.6778 4.03125 26.2644 4.03125 24.5797C4.03125 19.1399 4.04168 13.7 4.03125 8.25497C4.03125 6.39301 5.4864 5.09434 7.16059 5.0474C8.91303 5.00046 10.6707 5.03696 12.4283 5.03696C12.4596 5.03696 12.5013 5.02132 12.517 5.07347C12.5066 5.16735 12.4127 5.17778 12.3553 5.21429C11.3226 5.8193 10.3786 6.54427 9.58584 7.44134C8.27673 8.92257 7.36922 10.6228 7.0615 12.5995C6.51908 16.0888 7.60913 19.0512 10.0761 21.5234C10.5142 21.9667 10.5716 22.3109 10.2221 22.9055C9.79967 23.6201 9.15816 24.1051 8.47492 24.5484C8.4019 24.5902 8.32888 24.6423 8.25587 24.6892C8.14634 24.7831 8.21414 24.8301 8.30802 24.8718C8.32888 24.9187 8.35496 24.9605 8.38625 25.0022C8.98605 25.5342 9.55454 26.1027 10.1439 26.6451C10.4203 26.9007 10.6968 27.1666 10.9627 27.4326C11.0723 27.5317 11.2548 27.563 11.2809 27.7508Z"
+                  fill="white"
+                />
+                <path
+                  d="M11.2776 27.7508C11.2515 27.5683 11.0689 27.537 10.9594 27.4274C10.6934 27.1562 10.417 26.8955 10.1406 26.6399C9.55121 26.0975 8.98271 25.529 8.38292 24.997C8.35163 24.9553 8.32555 24.9135 8.30469 24.8666C9.63466 25.1274 10.9333 24.95 12.2112 24.5589C12.644 24.4285 13.0769 24.2981 13.515 24.1886C13.8123 24.1103 14.1253 24.126 14.4121 24.2303C17.7188 25.3673 20.9837 25.263 24.1965 23.8548C25.5057 23.2758 26.7 22.4622 27.7118 21.4452C27.764 21.393 27.8005 21.3148 27.8944 21.3096C27.9413 21.3826 27.9152 21.4608 27.9152 21.5391V24.5902C27.9257 26.3322 26.5279 27.7508 24.7859 27.7665H24.7598C22.8822 27.7769 21.0046 27.7665 19.127 27.7665H11.5905C11.4862 27.756 11.3819 27.7508 11.2776 27.7508Z"
+                  fill="white"
+                />
+                <path
+                  d="M7.44481 5.05273H24.5571C26.4295 5.05273 27.9472 6.57047 27.9472 8.44286V24.246C27.9472 26.1184 26.4295 27.6362 24.5571 27.6362H7.44481C5.57242 27.6362 4.05469 26.1184 4.05469 24.246V8.44286C4.05469 6.57047 5.57242 5.05273 7.44481 5.05273Z"
+                  stroke="white"
+                  stroke-width="0.104311"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M12.0161 16.0258C12.8037 16.0258 13.5443 16.0206 14.2797 16.0258C14.6917 16.031 14.916 16.2031 14.9577 16.5317C15.0046 16.9437 14.7647 17.2202 14.3162 17.2254C13.4713 17.2358 12.6315 17.2306 11.7866 17.2306C11.5415 17.2306 11.3016 17.241 11.0564 17.2254C10.7539 17.2097 10.4567 17.1471 10.3106 16.8342C10.1646 16.5213 10.2689 16.2396 10.4671 15.9841C11.2703 14.9618 12.0787 13.9343 12.8871 12.9121C12.934 12.8495 12.981 12.7869 13.0279 12.7295C12.9758 12.6409 12.9028 12.6826 12.8402 12.6774C12.2769 12.6722 11.7084 12.6774 11.1451 12.6722C11.0147 12.6722 10.8843 12.6565 10.7592 12.6305C10.4619 12.5627 10.2793 12.2654 10.3471 11.9733C10.3941 11.7751 10.5505 11.6134 10.7487 11.5665C10.8739 11.5352 11.0043 11.5195 11.1347 11.5195C12.063 11.5143 12.9966 11.5143 13.925 11.5195C14.0919 11.5143 14.2536 11.5352 14.4153 11.5769C14.7699 11.6969 14.9212 12.0254 14.7804 12.3697C14.6552 12.667 14.457 12.9225 14.2588 13.1781C13.5756 14.0491 12.8923 14.9149 12.2091 15.7754C12.1517 15.8432 12.0996 15.911 12.0161 16.0258Z"
+                  fill="white"
+                />
+                <path
+                  d="M18.0642 13.2825C18.1894 13.1208 18.3198 12.9695 18.5336 12.9278C18.9457 12.8444 19.3316 13.1103 19.3368 13.5276C19.3525 14.5707 19.3473 15.6138 19.3368 16.6569C19.3368 16.9281 19.1595 17.1681 18.9039 17.2463C18.6432 17.3454 18.3459 17.2672 18.1738 17.0429C18.0851 16.9334 18.0486 16.9125 17.9234 17.0116C17.4488 17.3975 16.9116 17.4653 16.3327 17.2776C15.4043 16.9751 15.0236 16.2501 14.9193 15.3687C14.8097 14.4142 15.1279 13.6006 15.9832 13.0999C16.6925 12.6775 17.4123 12.714 18.0642 13.2825ZM16.2179 15.1861C16.2284 15.4156 16.3014 15.6347 16.437 15.8172C16.7186 16.1927 17.2558 16.271 17.6366 15.9893C17.6992 15.9424 17.7565 15.885 17.8087 15.8172C18.1008 15.4208 18.1008 14.7689 17.8087 14.3725C17.6626 14.1691 17.4332 14.0491 17.188 14.0439C16.6143 14.0074 16.2127 14.4507 16.2179 15.1861ZM21.6786 15.2174C21.6369 13.877 22.5183 12.8756 23.7701 12.8391C25.1001 12.7974 26.0701 13.6893 26.1119 14.9932C26.1536 16.3127 25.3452 17.2463 24.0987 17.3715C22.7374 17.5071 21.6578 16.5213 21.6786 15.2174ZM22.9877 15.0923C22.9773 15.353 23.0555 15.6086 23.212 15.8224C23.4989 16.198 24.0361 16.271 24.4116 15.9789C24.469 15.9372 24.5159 15.885 24.5628 15.8329C24.8654 15.4365 24.8654 14.7689 24.5681 14.3725C24.422 14.1743 24.1925 14.0491 23.9474 14.0439C23.3841 14.0126 22.9877 14.4403 22.9877 15.0923ZM21.2197 14.1795C21.2197 14.988 21.2249 15.7964 21.2197 16.6048C21.2249 16.9751 20.9328 17.2828 20.5625 17.2932C20.4999 17.2932 20.4321 17.288 20.3695 17.2724C20.1087 17.2046 19.9106 16.9281 19.9106 16.5996V12.4532C19.9106 12.208 19.9053 11.9681 19.9106 11.723C19.9158 11.3214 20.1713 11.0606 20.5573 11.0606C20.9537 11.0554 21.2197 11.3162 21.2197 11.7334C21.2249 12.5471 21.2197 13.3659 21.2197 14.1795Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2110_5065">
+                  <rect
+                    width="24"
+                    height="22.7712"
+                    fill="white"
+                    transform="translate(4 5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="phone">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.002 0.835999C14.4787 1.23315 15.8251 2.01135 16.9064 3.09265C17.9877 4.17395 18.7659 5.52039 19.1631 6.99711"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12.0996 4.20258C12.9856 4.44087 13.7935 4.90779 14.4423 5.55657C15.0911 6.20535 15.558 7.01321 15.7963 7.89924"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M5.71398 10.0712C6.61757 11.9185 8.11498 13.4091 9.96638 14.3043C10.1018 14.3684 10.2517 14.3963 10.4011 14.3849C10.5506 14.3736 10.6946 14.3236 10.8188 14.2398L13.5449 12.422C13.6654 12.3416 13.8042 12.2925 13.9485 12.2793C14.0928 12.266 14.2381 12.289 14.3713 12.346L19.4712 14.5317C19.6445 14.6053 19.7891 14.7332 19.8834 14.8962C19.9776 15.0591 20.0163 15.2483 19.9937 15.4351C19.8325 16.6965 19.2171 17.8558 18.2627 18.6961C17.3082 19.5364 16.0802 19.9999 14.8086 20C10.8811 20 7.1145 18.4398 4.33735 15.6627C1.56019 12.8855 0 9.11887 0 5.19138C6.68658e-05 3.91977 0.463633 2.69178 1.3039 1.73735C2.14417 0.782915 3.30352 0.167485 4.56487 0.00628952C4.75173 -0.0163242 4.94089 0.0224034 5.10383 0.116638C5.26677 0.210872 5.39467 0.355508 5.46827 0.528754L7.65586 5.63314C7.71245 5.76517 7.7355 5.90914 7.72298 6.05224C7.71045 6.19534 7.66273 6.33312 7.58407 6.45331L5.77259 9.22118C5.69014 9.34569 5.6414 9.48946 5.63113 9.63845C5.62085 9.78743 5.6494 9.93653 5.71398 10.0712Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+      <a href="" class="back-top">
+        <svg
+          width="15"
+          height="10"
+          viewBox="0 0 15 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.25 9.5C11.9167 8.62501 7.25004 5.65002 7.25004 0.750001"
+            stroke="#543929"
+          />
+          <path
+            d="M0.250047 9.49993C2.58337 8.62494 7.25 5.64995 7.25 0.75"
+            stroke="#543929"
+          />
+        </svg>
+      </a>
+    </div>
+    <footer>
+      <div class="container-fluid p-0 footer-main">
+        <div class="footer-wrapper">
+          <a href="#" class="footer-logo d-block">
+            <img src="./assets/images/logo-footer.svg" alt="" />
+          </a>
+          <div class="footer-bottom row g-0">
+            <div class="footer-bottom__left col-lg-3 d-none d-lg-block">
+              <a
+                href="#"
+                class="b3-font color-white text-uppercase mt-auto link-hover"
+                >About Van phong peninsula</a
+              >
+            </div>
+            <div class="footer-bottom__center col-lg-6">
+              <div class="footer-info">
+                <p class="text-center">Van Phong Bay, Nha Trang, Khanh Hoa</p>
+                <div class="footer-contact">
+                  <p class="contact-email">
+                    Email:
+                    <a href="#" class="link-hover"> sale@vanphongresort.vn</a>
+                  </p>
+                  <p class="contact-tel">
+                    Telephone:
+                    <a href="#" class="link-hover"> (+84) 2583 939 888</a>
+                  </p>
+                </div>
+              </div>
+              <div class="footer-download d-none d-lg-flex">
+                <a href="#" class="btn-download" download>DOWNLOAD BROCHURE</a>
+                <div class="copyright">
+                  © 2025 VIAS RESORT VAN PHONG PENINSULA
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom__right col-lg-3">
+              <div class="newsletter">
+                <h4 class="title-social text-uppercase b3-font color-white">
+                  Sign up to our newsletter
+                </h4>
+                <form action="">
+                  <input type="email" placeholder="Email" />
+                  <button type="submit">
+                    <svg
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.7048 1.36696L5.34014 10.7894V15.5007L8.16687 12.6739M0.628906 7.49156L15.7048 1.33398L13.0666 15.0295L0.628906 7.49156Z"
+                        stroke="white"
+                        stroke-width="0.833333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="social">
+                <h4 class="title-social text-uppercase b3-font color-white">
+                  Follow us on
+                </h4>
+                <ul class="footer-social d-flex">
+                  <li>
+                    <a href="#" class="facebook">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          d="M21.3548 17.931L21.871 14.8276H18.7742V12.6552C18.7742 11.7862 19.0968 11.1034 20.5161 11.1034H22V8.24828C21.1613 8.12414 20.2581 8 19.4194 8C16.7742 8 14.9032 9.55172 14.9032 12.3448V14.8276H12V17.931H14.9032V26C16.1935 26 17.4839 26 18.7742 26V17.931H21.3548Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="insta">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <g clip-path="url(#clip0_1374_137)">
+                          <path
+                            d="M16.9968 8.00101C18.2827 8.00101 19.5688 8.00389 20.8547 8.00101C21.6089 7.9987 22.3406 8.12728 23.0196 8.44932C24.6448 9.21968 25.6302 10.4946 25.9275 12.2781C25.9749 12.5811 25.9975 12.8876 25.9952 13.1943C26.0004 15.7314 25.9952 18.2711 25.9996 20.8094C26.0019 22.0526 25.6536 23.1753 24.861 24.1403C24.1325 25.028 23.2096 25.6251 22.0783 25.8603C21.6801 25.9448 21.2744 25.9894 20.8674 25.9932C18.2908 26.0048 15.7141 26.0004 13.1372 25.9987C11.9217 25.9987 10.8212 25.6481 9.87387 24.8743C8.98011 24.1437 8.38331 23.2151 8.13969 22.0829C8.05359 21.68 8.00925 21.2693 8.00735 20.8573C7.99553 18.2856 8.00158 15.7136 8.0013 13.1416C8.0013 11.9085 8.36255 10.7982 9.15165 9.84417C9.88078 8.96281 10.8051 8.38648 11.9269 8.13305C12.334 8.04334 12.7498 7.99933 13.1666 8.00187L16.9968 8.00101ZM12.6806 16.9997C12.6831 19.3742 14.6122 21.3243 16.9922 21.314C19.4374 21.3047 21.307 19.369 21.3168 16.9988C21.3258 14.6197 19.3624 12.6696 16.9922 12.6808C14.614 12.6932 12.6782 14.6313 12.6806 16.9997ZM20.5995 12.3219C20.5978 12.9023 21.0813 13.3886 21.6695 13.3993C22.2527 13.4094 22.7564 12.9129 22.7578 12.3262C22.7569 12.0401 22.6434 11.7658 22.4418 11.5628C22.2402 11.3598 21.9668 11.2443 21.6807 11.2413C21.0911 11.2396 20.6016 11.7288 20.5995 12.3219Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M16.9964 14.1201C18.5769 14.1175 19.8815 15.4241 19.8795 17.0064C19.8775 18.5886 18.5821 19.8779 17.0013 19.8788C15.4156 19.8788 14.1182 18.5814 14.1211 16.994C14.1235 16.2323 14.4273 15.5025 14.966 14.964C15.5048 14.4256 16.2347 14.1222 16.9964 14.1201Z"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1374_137">
+                            <rect
+                              width="18"
+                              height="18"
+                              fill="white"
+                              transform="translate(8 8)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="youtube">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.8253 9.48941C25.682 9.75294 26.3574 10.5247 26.5881 11.5035C27.0164 13.2918 26.9999 17.0188 26.9999 17.0188C26.9999 17.0188 26.9999 20.7271 26.5881 22.5153C26.3574 23.4941 25.682 24.2659 24.8253 24.5294C23.2602 25 17 25 17 25C17 25 10.7562 25 9.17462 24.5106C8.31795 24.2471 7.6425 23.4753 7.41186 22.4965C7 20.7271 7 17 7 17C7 17 7 13.2918 7.41186 11.5035C7.6425 10.5247 8.33443 9.73412 9.17462 9.47059C10.7397 9 17 9 17 9C17 9 23.2602 9 24.8253 9.48941ZM20.2125 16.8693L15.0065 20.2952V13.4434L20.2125 16.8693Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tiktok">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          d="M14.8411 23.5743C16.5099 23.5743 17.8627 22.3795 17.8627 20.5526V7H21.4865C21.2833 9.47163 23.7403 11.8592 26.45 11.8046V15.2121C24.1327 15.2121 22.1621 14.2323 21.4762 13.6885V20.5526C21.4762 23.5743 19.0992 27.0007 14.8411 27.0007C10.583 27.0007 8.25781 23.5743 8.25781 20.5526C8.25781 16.2879 12.771 13.8145 15.7602 14.419V17.8898C15.6098 17.8366 15.222 17.758 14.8917 17.758C13.2091 17.6959 11.8194 19.0607 11.8194 20.5526C11.8194 22.2214 13.1723 23.5743 14.8411 23.5743Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="linkedin">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.619 7H10.381C9.06667 7 8 8.06667 8 9.38095V24.619C8 25.9333 9.06667 27 10.381 27H25.619C26.9333 27 28 25.9333 28 24.619V9.38095C28 8.06667 26.9333 7 25.619 7ZM14.1905 14.619V23.6667H11.3333V14.619H14.1905ZM11.3333 11.9857C11.3333 11.319 11.9048 10.8095 12.7619 10.8095C13.619 10.8095 14.1571 11.319 14.1905 11.9857C14.1905 12.6524 13.6571 13.1905 12.7619 13.1905C11.9048 13.1905 11.3333 12.6524 11.3333 11.9857ZM24.6667 23.6667H21.8095C21.8095 23.6667 21.8095 19.2571 21.8095 18.9048C21.8095 17.9524 21.3333 17 20.1429 16.981H20.1048C18.9524 16.981 18.4762 17.9619 18.4762 18.9048C18.4762 19.3381 18.4762 23.6667 18.4762 23.6667H15.619V14.619H18.4762V15.8381C18.4762 15.8381 19.3952 14.619 21.2429 14.619C23.1333 14.619 24.6667 15.919 24.6667 18.5524V23.6667Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-download d-flex flex-column d-lg-none">
+                <a href="#" class="btn-download" download>DOWNLOAD BROCHURE</a>
+                <a href="#" class="b3-font color-white text-uppercase"
+                  >About Van phong peninsula</a
+                >
+                <div class="copyright">
+                  © 2025 VIAS RESORT VAN PHONG PENINSULA
+                </div>
+              </div>
+              <a
+                href="https://alphacreative.vn/"
+                class="footer-alpha link-hover"
+              >
+                Digital experience by Alphacreative
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-pattern">
+          <img
+            src="./assets/images/background-footer.svg"
+            class="data-zoom-in-footer"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="container-fluid p-0 footer-ovl">
+        <div class="footer-wrapper">
+          <a href="#" class="footer-logo d-block">
+            <img src="./assets/images/logo-footer.svg" alt="" />
+          </a>
+          <div class="footer-bottom row g-0">
+            <div class="footer-bottom__left col-lg-3 d-none d-lg-block">
+              <a
+                href="#"
+                class="b3-font color-white text-uppercase mt-auto link-hover"
+                >About Van phong peninsula</a
+              >
+            </div>
+            <div class="footer-bottom__center col-lg-6">
+              <div class="footer-info">
+                <p class="text-center">Van Phong Bay, Nha Trang, Khanh Hoa</p>
+                <div class="footer-contact">
+                  <p class="contact-email">
+                    Email:
+                    <a href="#" class="link-hover"> sale@vanphongresort.vn</a>
+                  </p>
+                  <p class="contact-tel">
+                    Telephone:
+                    <a href="#" class="link-hover"> (+84) 2583 939 888</a>
+                  </p>
+                </div>
+              </div>
+              <div class="footer-download d-none d-lg-flex">
+                <a href="#" class="btn-download" download>DOWNLOAD BROCHURE</a>
+                <div class="copyright">
+                  © 2025 VIAS RESORT VAN PHONG PENINSULA
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom__right col-lg-3">
+              <div class="newsletter">
+                <h4 class="title-social text-uppercase b3-font color-white">
+                  Sign up to our newsletter
+                </h4>
+                <form action="">
+                  <input type="email" placeholder="Email" />
+                  <button type="submit">
+                    <svg
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.7048 1.36696L5.34014 10.7894V15.5007L8.16687 12.6739M0.628906 7.49156L15.7048 1.33398L13.0666 15.0295L0.628906 7.49156Z"
+                        stroke="white"
+                        stroke-width="0.833333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="social">
+                <h4 class="title-social text-uppercase b3-font color-white">
+                  Follow us on
+                </h4>
+                <ul class="footer-social d-flex">
+                  <li>
+                    <a href="#" class="facebook">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          d="M21.3548 17.931L21.871 14.8276H18.7742V12.6552C18.7742 11.7862 19.0968 11.1034 20.5161 11.1034H22V8.24828C21.1613 8.12414 20.2581 8 19.4194 8C16.7742 8 14.9032 9.55172 14.9032 12.3448V14.8276H12V17.931H14.9032V26C16.1935 26 17.4839 26 18.7742 26V17.931H21.3548Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="insta">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <g clip-path="url(#clip0_1374_137)">
+                          <path
+                            d="M16.9968 8.00101C18.2827 8.00101 19.5688 8.00389 20.8547 8.00101C21.6089 7.9987 22.3406 8.12728 23.0196 8.44932C24.6448 9.21968 25.6302 10.4946 25.9275 12.2781C25.9749 12.5811 25.9975 12.8876 25.9952 13.1943C26.0004 15.7314 25.9952 18.2711 25.9996 20.8094C26.0019 22.0526 25.6536 23.1753 24.861 24.1403C24.1325 25.028 23.2096 25.6251 22.0783 25.8603C21.6801 25.9448 21.2744 25.9894 20.8674 25.9932C18.2908 26.0048 15.7141 26.0004 13.1372 25.9987C11.9217 25.9987 10.8212 25.6481 9.87387 24.8743C8.98011 24.1437 8.38331 23.2151 8.13969 22.0829C8.05359 21.68 8.00925 21.2693 8.00735 20.8573C7.99553 18.2856 8.00158 15.7136 8.0013 13.1416C8.0013 11.9085 8.36255 10.7982 9.15165 9.84417C9.88078 8.96281 10.8051 8.38648 11.9269 8.13305C12.334 8.04334 12.7498 7.99933 13.1666 8.00187L16.9968 8.00101ZM12.6806 16.9997C12.6831 19.3742 14.6122 21.3243 16.9922 21.314C19.4374 21.3047 21.307 19.369 21.3168 16.9988C21.3258 14.6197 19.3624 12.6696 16.9922 12.6808C14.614 12.6932 12.6782 14.6313 12.6806 16.9997ZM20.5995 12.3219C20.5978 12.9023 21.0813 13.3886 21.6695 13.3993C22.2527 13.4094 22.7564 12.9129 22.7578 12.3262C22.7569 12.0401 22.6434 11.7658 22.4418 11.5628C22.2402 11.3598 21.9668 11.2443 21.6807 11.2413C21.0911 11.2396 20.6016 11.7288 20.5995 12.3219Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M16.9964 14.1201C18.5769 14.1175 19.8815 15.4241 19.8795 17.0064C19.8775 18.5886 18.5821 19.8779 17.0013 19.8788C15.4156 19.8788 14.1182 18.5814 14.1211 16.994C14.1235 16.2323 14.4273 15.5025 14.966 14.964C15.5048 14.4256 16.2347 14.1222 16.9964 14.1201Z"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1374_137">
+                            <rect
+                              width="18"
+                              height="18"
+                              fill="white"
+                              transform="translate(8 8)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="youtube">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.8253 9.48941C25.682 9.75294 26.3574 10.5247 26.5881 11.5035C27.0164 13.2918 26.9999 17.0188 26.9999 17.0188C26.9999 17.0188 26.9999 20.7271 26.5881 22.5153C26.3574 23.4941 25.682 24.2659 24.8253 24.5294C23.2602 25 17 25 17 25C17 25 10.7562 25 9.17462 24.5106C8.31795 24.2471 7.6425 23.4753 7.41186 22.4965C7 20.7271 7 17 7 17C7 17 7 13.2918 7.41186 11.5035C7.6425 10.5247 8.33443 9.73412 9.17462 9.47059C10.7397 9 17 9 17 9C17 9 23.2602 9 24.8253 9.48941ZM20.2125 16.8693L15.0065 20.2952V13.4434L20.2125 16.8693Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tiktok">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="17" cy="17" r="16.5" stroke="white" />
+                        <path
+                          d="M14.8411 23.5743C16.5099 23.5743 17.8627 22.3795 17.8627 20.5526V7H21.4865C21.2833 9.47163 23.7403 11.8592 26.45 11.8046V15.2121C24.1327 15.2121 22.1621 14.2323 21.4762 13.6885V20.5526C21.4762 23.5743 19.0992 27.0007 14.8411 27.0007C10.583 27.0007 8.25781 23.5743 8.25781 20.5526C8.25781 16.2879 12.771 13.8145 15.7602 14.419V17.8898C15.6098 17.8366 15.222 17.758 14.8917 17.758C13.2091 17.6959 11.8194 19.0607 11.8194 20.5526C11.8194 22.2214 13.1723 23.5743 14.8411 23.5743Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="linkedin">
+                      <svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 34 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.619 7H10.381C9.06667 7 8 8.06667 8 9.38095V24.619C8 25.9333 9.06667 27 10.381 27H25.619C26.9333 27 28 25.9333 28 24.619V9.38095C28 8.06667 26.9333 7 25.619 7ZM14.1905 14.619V23.6667H11.3333V14.619H14.1905ZM11.3333 11.9857C11.3333 11.319 11.9048 10.8095 12.7619 10.8095C13.619 10.8095 14.1571 11.319 14.1905 11.9857C14.1905 12.6524 13.6571 13.1905 12.7619 13.1905C11.9048 13.1905 11.3333 12.6524 11.3333 11.9857ZM24.6667 23.6667H21.8095C21.8095 23.6667 21.8095 19.2571 21.8095 18.9048C21.8095 17.9524 21.3333 17 20.1429 16.981H20.1048C18.9524 16.981 18.4762 17.9619 18.4762 18.9048C18.4762 19.3381 18.4762 23.6667 18.4762 23.6667H15.619V14.619H18.4762V15.8381C18.4762 15.8381 19.3952 14.619 21.2429 14.619C23.1333 14.619 24.6667 15.919 24.6667 18.5524V23.6667Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-download d-flex flex-column d-lg-none">
+                <a href="#" class="btn-download" download>DOWNLOAD BROCHURE</a>
+                <a href="#" class="b3-font color-white text-uppercase"
+                  >About Van phong peninsula</a
+                >
+                <div class="copyright">
+                  © 2025 VIAS RESORT VAN PHONG PENINSULA
+                </div>
+              </div>
+              <a
+                href="https://alphacreative.vn/"
+                class="footer-alpha link-hover"
+              >
+                Digital experience by Alphacreative
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-pattern">
+          <img
+            src="./assets/images/background-footer.svg"
+            class="data-zoom-in-footer"
+            alt=""
+          />
+        </div>
+      </div>
+    </footer>
+    <!-- end layout -->
+
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <script src="./assets/libs/lenis.min.js"></script>
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/splitting.min.js"></script>
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/lightgallery.umd.min.js"></script>
+    <!-- import custom js -->
+    <script type="module" src="./assets/main/js/script.min.js"></script>
+
+    <!-- end import custom js -->
+  </body>
+</html>

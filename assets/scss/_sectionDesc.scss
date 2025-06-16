@@ -11,7 +11,7 @@
       }
     }
   }
-  @media (max-width: 676px) {
+  @media (max-width: 767px) {
     padding: 0 24px;
   }
 
@@ -39,7 +39,7 @@
     font-style: italic;
     text-align: center;
     font-family: var(--font-heading);
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 
     @media (max-width: 991px) {

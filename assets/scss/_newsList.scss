@@ -1,0 +1,28 @@
+.news-list {
+  padding: 0 80px;
+  @media (max-width: 767px) {
+    padding: 0 24px;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 40px;
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .news {
+    &-img {
+      margin-bottom: 28px;
+    }
+    &-content {
+      h3 {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
