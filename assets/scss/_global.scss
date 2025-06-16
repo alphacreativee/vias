@@ -191,7 +191,7 @@ main {
   position: fixed;
   z-index: 10;
   right: 32px;
-  bottom: 40px;
+  bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -239,6 +239,10 @@ main {
         transition: all 0.3s ease;
         transform: scale(0);
         transform-origin: center;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
         &:hover {
           background-color: var(--color-secondary);
         }

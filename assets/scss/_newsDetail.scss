@@ -10,6 +10,31 @@
   .box {
     background-color: var(--color-white);
     padding: 80px 100px;
+    &-detail {
+      > * {
+        font-family: var(--font-body);
+        color: var(--color-secondary);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+      p {
+        margin-bottom: 32px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      figure {
+        margin-bottom: 32px;
+      }
+    }
+    &-title {
+      margin-bottom: 80px;
+      @media (max-width: 767px) {
+        margin-bottom: 64px;
+      }
+    }
+
     @media (max-width: 767px) {
       padding: 40px;
     }
@@ -42,7 +67,16 @@
   }
   .news-item {
     padding-bottom: 10px;
+    &:hover {
+      .underline-first {
+        &::before {
+          transform: scaleX(0);
+          transform-origin: bottom right;
+        }
+      }
+    }
   }
+
   .news-content {
     @media (max-width: 767px) {
       text-align: center;
