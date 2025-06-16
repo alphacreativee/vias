@@ -372,7 +372,9 @@ function customDropdown() {
 
       closeAllDropdowns();
     });
-
+    $(window).on("scroll", function () {
+      closeAllDropdowns();
+    });
     function closeAllDropdowns(exception) {
       $(".dropdown-custom__btn").removeClass("active");
       $dropdowns.each(function () {
