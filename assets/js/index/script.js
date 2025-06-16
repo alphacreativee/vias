@@ -783,9 +783,30 @@ function getNewletter() {
   });
 }
 
+function swiperNews() {
+  if ($(".swiper-news").length < 1) return;
+  var swiper = new Swiper(".swiper-news", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".news-related .swiper-button-next",
+      prevEl: ".news-related .swiper-button-prev",
+    },
+    pagination: {
+      el: ".news-related .swiper-pagination",
+      type: "progressbar",
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+}
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
-
+  swiperNews();
   loading();
   // RevealLoad();
   header();
