@@ -72,8 +72,30 @@ footer {
       }
     }
 
+    &-terms {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 40px;
+      margin-top: 40px;
+
+      a {
+        color: var(--color-white) !important;
+      }
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+      }
+    }
+
     &-social {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
       gap: 16px;
@@ -308,8 +330,10 @@ footer {
   }
 
   .copyright {
+    margin-left: auto;
     @media (max-width: 991px) {
       margin-bottom: 8px;
+      margin-left: 0;
     }
   }
 
