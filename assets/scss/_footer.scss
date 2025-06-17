@@ -172,6 +172,11 @@ footer {
     }
 
     &-bottom {
+      a {
+        &:hover {
+          color: #fff;
+        }
+      }
       &__right {
         display: flex;
         flex-direction: column;
